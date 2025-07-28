@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SandBox", "SandBox\SandBox.vcxproj", "{53B54C63-81C6-4D06-A307-7B59CC35FB02}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FEFC59D4-0278-4E1E-9D1A-E8972E20476B} = {FEFC59D4-0278-4E1E-9D1A-E8972E20476B}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LearningEngine", "LearningEngine\LearningEngine.vcxproj", "{FEFC59D4-0278-4E1E-9D1A-E8972E20476B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53B54C63-81C6-4D06-A307-7B59CC35FB02}.Debug|x64.ActiveCfg = Debug|x64
+		{53B54C63-81C6-4D06-A307-7B59CC35FB02}.Debug|x64.Build.0 = Debug|x64
+		{53B54C63-81C6-4D06-A307-7B59CC35FB02}.Release|x64.ActiveCfg = Release|x64
+		{53B54C63-81C6-4D06-A307-7B59CC35FB02}.Release|x64.Build.0 = Release|x64
+		{FEFC59D4-0278-4E1E-9D1A-E8972E20476B}.Debug|x64.ActiveCfg = Debug|x64
+		{FEFC59D4-0278-4E1E-9D1A-E8972E20476B}.Debug|x64.Build.0 = Debug|x64
+		{FEFC59D4-0278-4E1E-9D1A-E8972E20476B}.Release|x64.ActiveCfg = Release|x64
+		{FEFC59D4-0278-4E1E-9D1A-E8972E20476B}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D67A44AC-8BBB-43A8-9C22-350670B18B15}
+	EndGlobalSection
+EndGlobal
