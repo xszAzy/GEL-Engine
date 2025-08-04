@@ -1,0 +1,9 @@
+[submodule "LearningEngine/vendor/spdlog"]
+	path = LearningEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog
+[submodule "LearningEngine/vendor/GLFW"]
+	path = LearningEngine/vendor/GLFW
+	url = https://github.com/TheCherno/glfw
+[submodule "Hazel/vendor/imgui"]
+	path = Hazel/vendor/imgui
+	url = https://github.com/TheCherno/imgui
