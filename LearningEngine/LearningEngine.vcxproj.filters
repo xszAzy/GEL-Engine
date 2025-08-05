@@ -49,6 +49,9 @@
     <ClInclude Include="src\GEL\Input.h">
       <Filter>GEL</Filter>
     </ClInclude>
+    <ClInclude Include="src\GEL\KeyCodes.h">
+      <Filter>GEL</Filter>
+    </ClInclude>
     <ClInclude Include="src\GEL\Layer.h">
       <Filter>GEL</Filter>
     </ClInclude>
@@ -56,6 +59,9 @@
       <Filter>GEL</Filter>
     </ClInclude>
     <ClInclude Include="src\GEL\Log.h">
+      <Filter>GEL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GEL\MouseButtonCodes.h">
       <Filter>GEL</Filter>
     </ClInclude>
     <ClInclude Include="src\GEL\Window.h">
@@ -71,8 +77,6 @@
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\gelpch.h" />
-    <ClInclude Include="src\GEL\KeyCodes.h" />
-    <ClInclude Include="src\GEL\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GEL\Application.cpp">
