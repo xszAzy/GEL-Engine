@@ -1,36 +1,104 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="源文件">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="GEL">
+      <UniqueIdentifier>{1DEA870B-89F3-877C-126F-9E7C7E77937C}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="GEL\Events">
+      <UniqueIdentifier>{617327A9-4D2B-69F6-B632-4252A20904E7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="资源文件">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="GEL\ImGui">
+      <UniqueIdentifier>{07C1B03B-732B-65B2-BC69-165828134307}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\GEL\Core.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
+    <ClInclude Include="src\GEL.h" />
     <ClInclude Include="src\GEL\Application.h">
-      <Filter>头文件</Filter>
+      <Filter>GEL</Filter>
     </ClInclude>
-    <ClInclude Include="src\GEL.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="src\GEL\Core.h">
+      <Filter>GEL</Filter>
     </ClInclude>
     <ClInclude Include="src\GEL\EntryPoint.h">
-      <Filter>头文件</Filter>
+      <Filter>GEL</Filter>
     </ClInclude>
+    <ClInclude Include="src\GEL\Events\ApplicationEvent.h">
+      <Filter>GEL\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GEL\Events\Event.h">
+      <Filter>GEL\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GEL\Events\KeyEvent.h">
+      <Filter>GEL\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GEL\Events\MouseEvent.h">
+      <Filter>GEL\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GEL\ImGui\ImGuiLayer.h">
+      <Filter>GEL\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GEL\Input.h">
+      <Filter>GEL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GEL\Layer.h">
+      <Filter>GEL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GEL\LayerStack.h">
+      <Filter>GEL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GEL\Log.h">
+      <Filter>GEL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GEL\Window.h">
+      <Filter>GEL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gelpch.h" />
+    <ClInclude Include="src\GEL\KeyCodes.h" />
+    <ClInclude Include="src\GEL\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GEL\Application.cpp">
-      <Filter>源文件</Filter>
+      <Filter>GEL</Filter>
     </ClCompile>
+    <ClCompile Include="src\GEL\ImGui\ImGuiLayer.cpp">
+      <Filter>GEL\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GEL\Layer.cpp">
+      <Filter>GEL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GEL\LayerStack.cpp">
+      <Filter>GEL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GEL\Log.cpp">
+      <Filter>GEL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gelpch.cpp" />
   </ItemGroup>
 </Project>

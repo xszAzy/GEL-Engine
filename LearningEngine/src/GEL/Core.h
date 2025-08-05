@@ -9,3 +9,14 @@
 #else
     #error GEL only supports Window!
 #endif
+
+#ifdef GEL_ENABLE_ASSERTS
+    #define GEL_ASSERT(x,...){if(!(x)){GEL_ERROR("Assertion Failed:{0}",__VA_ARGS__);__debugbreak();}}
+    #define GEL_CORE_ASSERT(x,...){if(!(x)){GEL_ERROR("Assertion Failed:{0}",__VA_ARGS__);__debugbreak();}}
+#else
+    #define GEL_ASSERT(x,...)
+    #define GEL_CORE_ASSERT(x,...)
+#endif
+
+#define BIT(x) (1<<x)
+#define GEL_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)
