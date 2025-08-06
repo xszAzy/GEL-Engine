@@ -1,12 +1,14 @@
 #include<GEL.h>
-#include "gelpch.h"
-
 
 class ExampleLayer : public GEL::Layer
 {
 public:
 	
-	ExampleLayer(){}
+	ExampleLayer():Layer("Example")
+	{
+
+		
+	}
 	void OnUpdate() override {
 		
 	}
@@ -27,11 +29,10 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushLayer(new GEL::ImGuiLayer());
+		//PushLayer(new GEL::ImGuiLayer());
 	};
 	~Sandbox()
 	{
-
 	};
 
 };

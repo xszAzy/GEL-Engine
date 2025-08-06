@@ -16,6 +16,7 @@ IncludeDir={}
 IncludeDir["GLFW"]="LearningEngine/vendor/GLFW/include"
 IncludeDir["Glad"]="LearningEngine/vendor/Glad/include"
 IncludeDir["ImGui"]="LearningEngine/vendor/imgui"
+IncludeDir["glm"]="LearningEngine/vendor/glm"
 
 include "LearningEngine/vendor/GLFW"
 include "LearningEngine/vendor/Glad"
@@ -36,7 +37,9 @@ project "LearningEngine"
     files
     {
         "%{prj.name}/src/**.h",
-        "%{prj.name}/src/**.cpp"
+        "%{prj.name}/src/**.cpp",
+        "%{prj.name}/vendor/glm/glm/**.hpp",
+        "%{prj.name}/vendor/glm/glm/**.inl"
     }
 
     includedirs
@@ -45,7 +48,8 @@ project "LearningEngine"
         "%{prj.name}/vendor/spdlog/include",
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
-        "%{IncludeDir.ImGui}"
+        "%{IncludeDir.ImGui}",
+        "%{IncludeDir.glm}"
     }
 
     links
@@ -116,7 +120,8 @@ project "LearningEngine"
     includedirs
     {
         "LearningEngine/vendor/spdlog/include",
-        "LearningEngine/src"
+        "LearningEngine/src",
+        "%{IncludeDir.glm}"
     }
 
     links

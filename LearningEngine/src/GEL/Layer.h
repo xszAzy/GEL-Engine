@@ -3,6 +3,7 @@
 #include "GEL/Core.h"
 #include "GEL/Events/Event.h"
 
+
 namespace GEL
 {
 	class GEL_API Layer
@@ -14,6 +15,7 @@ namespace GEL
 		virtual void OnAttach() {}
 		virtual void OnDetach() {}
 		virtual void OnUpdate() {}
+		virtual void OnImGuiRenderer() {}
 		virtual void OnEvent(Event& event){}
 
 		const std::string& GetName() const { return m_DebugName; }
