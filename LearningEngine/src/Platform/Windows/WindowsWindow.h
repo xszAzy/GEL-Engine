@@ -1,8 +1,8 @@
 #pragma once
 
 #include "GEL/Window.h"
-#include "GEL/Log.h"
-
+#include "GEL/Renderer/GraphicsContext.h"
+//#include "GEL/Log.h"
 
 
 struct GLFWwindow;
@@ -29,6 +29,7 @@ namespace GEL {
 		virtual void Shutdown();
 	private:
 		GLFWwindow* m_Window;
+		GraphicsContext* m_Context;
 
 		struct WindowData
 		{

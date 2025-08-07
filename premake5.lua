@@ -24,9 +24,10 @@ include "LearningEngine/vendor/imgui"
 
 project "LearningEngine"
     location "LearningEngine"
-    kind "SharedLib"
+    kind "StaticLib"
     language "C++"
-    staticruntime "Off"
+    staticruntime "on"
+     cppdialect "C++17"
 
     targetdir("bin/" .. outputdir .. "/%{prj.name}")
     objdir("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -61,8 +62,6 @@ project "LearningEngine"
     }
 
     filter "system:windows"
-         cppdialect "C++17"
-         staticruntime "Off"
          systemversion "latest"
 
          defines
@@ -70,29 +69,24 @@ project "LearningEngine"
              "GEL_PLATFORM_WINDOWS",
              "GEL_BUILD_DLL",
              "GEL_BUILD_DLL_DEBUG",
-             "GLFW_INCLUDE_NONE"
-         }
-
-         postbuildcommands
-         {
-             ("{MKDIR} ../bin/" .. outputdir .. "/Sandbox"),
-             ("{COPYFILE} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+             "GLFW_INCLUDE_NONE",
+             "_CRT_SECURE_NO_WARNINGS"
          }
 
     filter "configurations:Debug"
         defines"GEL_DEBUG"
         runtime "Debug"
-        symbols "On"
+        symbols "on"
 
     filter "configurations:Release"
         defines "GEL_RELEASE"
         runtime "Release"
-        optimize "On"
+        optimize "on"
 
     filter "configurations:Dist"
         defines "GEL_DIST"
         runtime "Release"
-        optimize "On"
+        optimize "on"
 
     filter "action:vs*"
             buildoptions{"/utf-8"}
@@ -106,7 +100,8 @@ project "LearningEngine"
         location "Sandbox"
         kind "ConsoleApp"
         language "C++"
-        staticruntime "Off"
+        cppdialect "C++17"
+        staticruntime "on"
 
     targetdir("bin/" .. outputdir .. "/%{prj.name}")
     objdir("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -130,7 +125,6 @@ project "LearningEngine"
     }
 
     filter "system:windows"
-         cppdialect "C++17"
          systemversion "latest"
 
          defines
@@ -143,17 +137,17 @@ project "LearningEngine"
     filter "configurations:Debug"
         defines"GEL_DEBUG"
         runtime "Debug"
-        symbols "On"
+        symbols "on"
 
     filter "configurations:Release"
         defines "GEL_RELEASE"
         runtime "Release"
-        optimize "On"
+        optimize "on"
 
     filter "configurations:Dist"
         defines "GEL_DIST"
         runtime "Release"
-        optimize "On"
+        optimize "on"
 
     filter "action:vs*"
         buildoptions{"/utf-8"}

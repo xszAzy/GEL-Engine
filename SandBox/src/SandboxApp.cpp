@@ -1,5 +1,8 @@
 #include<GEL.h>
 
+#include "../imgui/imgui.h"
+
+
 class ExampleLayer : public GEL::Layer
 {
 public:
@@ -7,10 +10,14 @@ public:
 	ExampleLayer():Layer("Example")
 	{
 
-		
 	}
 	void OnUpdate() override {
 		
+	}
+	virtual void OnImGuiRenderer() override{
+		ImGui::Begin("Example Layer");
+		ImGui::Text("Hello World!");
+		ImGui::End();
 	}
 	void OnEvent(GEL::Event& event)override {
 		//GEL_TRACE("exampleevent{0}", e.ToString());
@@ -21,8 +28,10 @@ public:
 				GEL_TRACE("Tab is here");
 			GEL_TRACE("{0}", (char)e.GetKeyCode());
 		}
+		
 	}
 };
+
 class Sandbox :public GEL::Application
 {
 public:

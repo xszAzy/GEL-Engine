@@ -5,6 +5,7 @@
 #include "GEL/Events/MouseEvent.h"
 #include "GEL/Events/KeyEvent.h"
 
+#include "Platform/OpenGL/OpenGLContext.h"
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
@@ -32,8 +33,8 @@ namespace GEL {
 		m_Data.Title = props.Title;
 		m_Data.Width = props.Width;
 		m_Data.Height = props.Height;
-
 		GEL_CORE_INFO("Creating window {0} ({1},{2})", props.Title, props.Width, props.Height);
+
 
 		if (!s_GLFWInitialized)
 		{
@@ -45,6 +46,10 @@ namespace GEL {
 		}
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
+
+		m_Context = new  OpenGLContext(m_Window);
+		m_Context->Init();
+
 		glfwMakeContextCurrent(m_Window);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		GEL_CORE_ASSERT(status, "Failed to initialize Glad!");
@@ -143,7 +148,8 @@ namespace GEL {
 	void WindowsWindow::OnUpdate()
 	{
 		glfwPollEvents();
-		glfwSwapBuffers(m_Window);
+		
+		m_Context->SwapBuffers();
 	}
 
 	void WindowsWindow::SetVSync(bool enabled)

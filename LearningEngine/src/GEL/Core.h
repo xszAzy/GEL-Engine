@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef GEL_PLATFORM_WINDOWS
+#if GEL_DYNAMIC_LINK
     #ifdef GEL_BUILD_DLL
         #define GEL_API __declspec(dllexport)
     #else
         #define GEL_API __declspec(dllimport)
     #endif
+#else
+    #define GEL_API
+#endif
 #else
     #error GEL only supports Window!
 #endif
