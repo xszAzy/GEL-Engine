@@ -13,26 +13,6 @@ namespace GEL {
 	{ return *s_Instance; }
 	Application* Application::s_Instance=nullptr;
 
-	static GLenum ShaderDataTypeToOpenGLBaseType(ShaderDataType type)
-	{
-		switch (type)
-		{
-		case ShaderDataType::Float:		return GL_FLOAT;	break;
-		case ShaderDataType::Float2:	return GL_FLOAT;	break;
-		case ShaderDataType::Float3:	return GL_FLOAT;	break;
-		case ShaderDataType::Float4:	return GL_FLOAT;	break;
-		case ShaderDataType::Int:		return GL_INT;		break;
-		case ShaderDataType::Int2:		return GL_INT;		break;
-		case ShaderDataType::Int3:		return GL_INT;		break;
-		case ShaderDataType::Int4:		return GL_INT;		break;
-		case ShaderDataType::Mat3:		return GL_FLOAT;	break;
-		case ShaderDataType::Mat4:		return GL_FLOAT;	break;
-		case ShaderDataType::Bool:		return GL_BOOL;		break;
-		}
-		GEL_CORE_ASSERT(false, "Unknown ShaderDataType!");
-		return 0;
-	}
-
 	Application::Application() {
 
 		GEL_CORE_ASSERT(!s_Instance, "Application already exists!");
@@ -43,8 +23,7 @@ namespace GEL {
 		m_ImGuiLayer = new ImGuiLayer();
 		PushOverlay(m_ImGuiLayer);
 
-		glGenVertexArrays(1, &m_VertexArray);
-		glBindVertexArray(m_VertexArray);
+		m_VertexArray.reset(VertexArray::Create());
 
 		//-1 : 1
 		float vertices[3 * 7] = {
@@ -54,29 +33,27 @@ namespace GEL {
 		};
 
 		m_VertexBuffer.reset(VertexBuffer::Create(vertices,sizeof(vertices)));
-		{
-			BufferLayout layout = {
-				{ ShaderDataType::Float3,"a_Position"},
-				{ ShaderDataType::Float4,"a_Color"}
-			};
-			m_VertexBuffer->SetLayout(layout);
-		}
-		uint32_t index = 0;
-		const auto& layout = m_VertexBuffer->GetLayout();
-		for (const auto& element : layout)
-		{
-			glEnableVertexAttribArray(index);
-			glVertexAttribPointer(index, element.GetComponentCount(), 
-			ShaderDataTypeToOpenGLBaseType(element.Type), 
-			element.Normalized ? GL_TRUE : GL_FALSE, 
-			m_VertexBuffer->GetLayout().GetStride(),
-			(const void*)element.Offset);
-		index++;
-		}
+		
+		BufferLayout layout = {
+			{ ShaderDataType::Float3,"a_Position"},
+			{ ShaderDataType::Float4,"a_Color"}
+		};
+		m_VertexBuffer->SetLayout(layout);
+		m_VertexArray->AddVertexBuffer(m_VertexBuffer);
 
 		uint32_t indices[3] = { 0,1,2 };
 		m_IndexBuffer.reset(IndexBuffer::Create(indices, sizeof(indices)/sizeof(uint32_t)));
+		m_VertexArray->SetIndexBuffer(m_IndexBuffer);
 
+		m_SquareVA.reset(VertexArray::Create());
+		
+		float vertices[3 * 4] = {
+			-0.5f, -0.5f, 0.0f,
+			 0.5f, -0.5f, 0.0f,
+			 0.0f,  0.5f, 0.0f
+		};
+
+		std::shared_ptr<VertexBuffer> squareVB=std::make_shared<VertexBuffer>();
 		std::string vertexSrc = R"(
 			#version 330 core
 			layout(location=0) in vec3 a_Position;
@@ -133,17 +110,12 @@ namespace GEL {
 	}
 	void Application::Run()
 	{
-		/*WindowResizeEvent e(1280, 720);
-		if (e.IsInCategory(EventCategoryApplication))
-			GEL_CORE_INFO("WindowResizeEvent: {0}", e.ToString());
-		if (e.IsInCategory(EventCategoryInput))
-			GEL_CORE_INFO("WindowResizeEvent: {0}", e.ToString());*/
 		while (m_Running) {
 			glClearColor(0.1f, 0.1f, 0.1f, 0.2f);
 			glClear(GL_COLOR_BUFFER_BIT);
 
 			m_Shader->Bind();
-			glBindVertexArray(m_VertexArray);
+			m_VertexArray->Bind();
 			glDrawElements(GL_TRIANGLES, m_IndexBuffer->GetCount(), GL_UNSIGNED_INT, nullptr);
 
 			for (Layer* layer : m_LayerStack)
