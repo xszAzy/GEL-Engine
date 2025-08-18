@@ -11,7 +11,7 @@
     #define GEL_API
 #endif
 #else
-    #error GEL only supports Window!
+    #define GEL_API
 #endif
 
 #ifdef GEL_ENABLE_ASSERTS

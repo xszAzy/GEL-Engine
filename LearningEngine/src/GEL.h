@@ -4,7 +4,7 @@
 
 #include "GEL/Application.h"
 #include "GEL/Layer.h"
-#include "GEL/Log.h"
+
 
 //#include "GEL/Input.h"
 #include "GEL/KeyCodes.h"

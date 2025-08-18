@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+	version = "1.0">
+	<FileRef
+		location = "group:LearningEngine/vendor/GLFW/GLFW.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:LearningEngine/vendor/Glad/Glad.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:LearningEngine/vendor/imgui/ImGui.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:LearningEngine/LearningEngine.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Sandbox/Sandbox.xcodeproj">
+	</FileRef>
+</Workspace>

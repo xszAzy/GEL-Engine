@@ -1,7 +1,7 @@
 #include "gelpch.h"
 #include "Shader.h"
 #include <glad/glad.h>
-#include <GEL/Log.h>
+#include "GEL/Log.h"
 
 namespace GEL{
 	Shader::Shader(const std::string& vertexSrc, const std::string& fragmentSrc)

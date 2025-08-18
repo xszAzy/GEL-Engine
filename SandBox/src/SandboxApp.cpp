@@ -1,7 +1,6 @@
-#include<GEL.h>
+#include "GEL.h"
 
 #include "../imgui/imgui.h"
-
 
 class ExampleLayer : public GEL::Layer
 {
