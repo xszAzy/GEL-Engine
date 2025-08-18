@@ -13,7 +13,6 @@
 #endif
 #ifdef GEL_PLATFORM_MAC
 	#define GEL_API
-	#define ANGLE_STATIC
 #endif
 
 #ifdef GEL_ENABLE_ASSERTS

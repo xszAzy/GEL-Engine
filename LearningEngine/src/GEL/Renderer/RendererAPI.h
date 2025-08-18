@@ -14,7 +14,8 @@ namespace GEL{
 			None = 0,
 			OpenGL = 1,
 			//Vulkan = 2,
-			//DirectX = 3
+			//DirectX = 3,
+			//Metal=4
 		};
 	public:
 		virtual void SetClearColor(const glm::vec4& color)=0;

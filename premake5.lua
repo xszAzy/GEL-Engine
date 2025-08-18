@@ -86,8 +86,6 @@ project "LearningEngine"
         
         links
         {
-        "GL",
-        "EGL",
         "Metal.framework",
         "Cocoa.framework",
         "IOKit.framework",
@@ -176,8 +174,6 @@ project "Sandbox"
         
         links
         {
-        "GL",
-        "EGL",
         "Cocoa.framework",
         "IOKit.framework",
         "AppKit.framework",

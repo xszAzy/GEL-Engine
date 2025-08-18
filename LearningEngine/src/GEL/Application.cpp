@@ -6,6 +6,8 @@
 #include "GEL/Renderer/Renderer.h"
 #include "Input.h"
 
+
+
 namespace GEL {
 
 #define BIND_EVENT_FN(x) std::bind(&Application::x,this,std::placeholders::_1)
@@ -13,7 +15,9 @@ namespace GEL {
 	{ return *s_Instance; }
 	Application* Application::s_Instance=nullptr;
 
-	Application::Application() {
+	Application::Application()
+		:m_Camera(-1.0f,1.0f,-1.0f,1.0f)
+	{
 
 		GEL_CORE_ASSERT(!s_Instance, "Application already exists!");
 		s_Instance = this;
@@ -70,6 +74,8 @@ namespace GEL {
 			#version 330 core
 			layout(location=0) in vec3 a_Position;
 			layout(location=1) in vec4 a_Color;
+  
+			uniform mat4 u_ViewProjection;
 
 			out vec3 v_Position;
 			out vec4 v_Color;
@@ -77,7 +83,7 @@ namespace GEL {
 			{
 				v_Position = a_Position;
 				v_Color = a_Color;	
-				gl_Position =vec4(a_Position+0.3,1.0);
+				gl_Position =u_ViewProjection*vec4(a_Position+0.3,1.0);
 			}
 		)";
 		std::string fragmentSrc = R"(
@@ -95,17 +101,22 @@ namespace GEL {
         std::string vertexSrc2 = R"(
             #version 330 core
             layout(location=0) in vec3 a_Position;
+		
+			uniform mat4 u_ViewProjection;
 
             out vec3 v_Position;
             void main()
             {
                 v_Position = a_Position;
-                gl_Position =vec4(a_Position+0.3,1.0);
+                gl_Position =u_ViewProjection*vec4(a_Position+0.3,1.0);
             }
         )";
         std::string fragmentSrc2 = R"(
             #version 330 core
             layout(location=0) out vec4 color;
+		
+			//uniform vec4 u_Color;
+		
             in vec3 v_Position;
             void main()
             {
@@ -147,13 +158,13 @@ namespace GEL {
 			RenderCommand::SetClearColor({0.1f, 0.1f, 0.1f, 1});
             RenderCommand::Clear();
             
-            Renderer::BeginScene();
+			m_Camera.SetPosition({0.5f,0.5f,0.5f});
+			m_Camera.SetRotation(45.0f);
 			
-            m_NewShader->Bind();
-            Renderer::Submit(m_SquareVA);
-            
-            m_Shader->Bind();
-            Renderer::Submit(m_VertexArray);
+            Renderer::BeginScene(m_Camera);
+			
+            Renderer::Submit(m_NewShader,m_SquareVA);
+            Renderer::Submit(m_Shader,m_VertexArray);
             
             Renderer::EndScene();
 

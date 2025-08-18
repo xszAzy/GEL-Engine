@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		1817955824A247CA9F871398 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5C1300C9792D32A5828940 /* CoreFoundation.framework */; };
 		1830A6D432FD158636CDAD14 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A66FBFC778F0A6E7921FA3C /* Renderer.cpp */; };
 		419B1DED8A3A5C1FAD66142D /* WindowsWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF26CE95B01E3C871C21BCD5 /* WindowsWindow.cpp */; };
+		4761CB8F2E53126D00B5CA60 /* OrthographicCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4761CB8E2E53126D00B5CA60 /* OrthographicCamera.cpp */; };
 		490377E4E3276D16934D4E24 /* RenderCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E4E950CD2A8D9FE508C634C /* RenderCommand.cpp */; };
 		4FE61EB5619D5EA7D70B4CF5 /* OpenGLContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8034E7D4BEBC62F6E3974BD /* OpenGLContext.cpp */; };
 		5B87855ACCAA264C8270D39A /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F86287C2209D40740838CE02 /* Layer.cpp */; };
@@ -41,47 +42,60 @@
 /* Begin PBXContainerItemProxy section */
 		01D9077A27FF372C8F062DBA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1197FB54F5DF038679CC3194 /* vendor/Glad/Glad.xcodeproj */;
+			containerPortal = 1197FB54F5DF038679CC3194 /* Glad.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3E398A4741AA5C79C3170087;
 			remoteInfo = libGlad.a;
 		};
 		54137A137A39A9C5E140A053 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1197FB54F5DF038679CC3194 /* vendor/Glad/Glad.xcodeproj */;
+			containerPortal = 1197FB54F5DF038679CC3194 /* Glad.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 1B45B54D49EC093FA32D638D;
 			remoteInfo = libGlad.a;
 		};
 		588D649D43798A8F8B5F52DD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E19C4EDD3901C1CFEB0FDD1D /* vendor/imgui/ImGui.xcodeproj */;
+			containerPortal = E19C4EDD3901C1CFEB0FDD1D /* ImGui.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = B27392EA23FEAB5CD2FFD12A;
 			remoteInfo = libImGui.a;
 		};
 		7AC179D2A0E7A98407EEA012 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 11BF275CF6062F8E79F35D9C /* vendor/GLFW/GLFW.xcodeproj */;
+			containerPortal = 11BF275CF6062F8E79F35D9C /* GLFW.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = FB2B399FFE9C0BD18008AFDF;
 			remoteInfo = libGLFW.a;
 		};
 		AAC7D73695B3FD28DD99C576 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E19C4EDD3901C1CFEB0FDD1D /* vendor/imgui/ImGui.xcodeproj */;
+			containerPortal = E19C4EDD3901C1CFEB0FDD1D /* ImGui.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = F03FB590F3B087C2751D2BD0;
 			remoteInfo = libImGui.a;
 		};
 		CCFBEC6BF3221C1D5A2912AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 11BF275CF6062F8E79F35D9C /* vendor/GLFW/GLFW.xcodeproj */;
+			containerPortal = 11BF275CF6062F8E79F35D9C /* GLFW.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 6E92D9A59D392D97F67A87E5;
 			remoteInfo = libGLFW.a;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CDA89391161977C35AB849D1 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		00DBA1D5B3D1AB8704F40815 /* OpenGLRendererAPI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = OpenGLRendererAPI.cpp; path = src/Platform/OpenGL/OpenGLRendererAPI.cpp; sourceTree = "<group>"; };
@@ -107,8 +121,8 @@
 		0E8552FD1B10056F95F4D13D /* dual_quaternion.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = dual_quaternion.inl; path = vendor/glm/glm/gtx/dual_quaternion.inl; sourceTree = "<group>"; };
 		0EF28886D25E4A381101EEC6 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		11762D7985D0726B03B3FBB9 /* vector_uint3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_uint3.hpp; path = vendor/glm/glm/ext/vector_uint3.hpp; sourceTree = "<group>"; };
-		1197FB54F5DF038679CC3194 /* libGlad.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Glad.xcodeproj"; path = vendor/Glad/Glad.xcodeproj; sourceTree = SOURCE_ROOT; };
-		11BF275CF6062F8E79F35D9C /* libGLFW.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "GLFW.xcodeproj"; path = vendor/GLFW/GLFW.xcodeproj; sourceTree = SOURCE_ROOT; };
+		1197FB54F5DF038679CC3194 /* Glad.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Glad.xcodeproj; path = vendor/Glad/Glad.xcodeproj; sourceTree = SOURCE_ROOT; };
+		11BF275CF6062F8E79F35D9C /* GLFW.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GLFW.xcodeproj; path = vendor/GLFW/GLFW.xcodeproj; sourceTree = SOURCE_ROOT; };
 		11E682E56E6D8757F7104125 /* matrix_int3x3_sized.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_int3x3_sized.hpp; path = vendor/glm/glm/ext/matrix_int3x3_sized.hpp; sourceTree = "<group>"; };
 		12165EBF226342B120500CFF /* matrix_double2x4_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double2x4_precision.hpp; path = vendor/glm/glm/ext/matrix_double2x4_precision.hpp; sourceTree = "<group>"; };
 		1311AB91AD6B9483E9A3F9D1 /* matrix_uint4x3_sized.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_uint4x3_sized.hpp; path = vendor/glm/glm/ext/matrix_uint4x3_sized.hpp; sourceTree = "<group>"; };
@@ -190,6 +204,8 @@
 		456A5BAF3661C9A1A26549EF /* matrix_uint2x2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_uint2x2.hpp; path = vendor/glm/glm/ext/matrix_uint2x2.hpp; sourceTree = "<group>"; };
 		46484EA93A47981BBF32ACE9 /* matrix_int3x3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_int3x3.hpp; path = vendor/glm/glm/ext/matrix_int3x3.hpp; sourceTree = "<group>"; };
 		46DD1A415367CCB3CE4C9881 /* matrix_float4x3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float4x3.hpp; path = vendor/glm/glm/ext/matrix_float4x3.hpp; sourceTree = "<group>"; };
+		4761CB8D2E53126D00B5CA60 /* OrthographicCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OrthographicCamera.h; path = src/GEL/Renderer/OrthographicCamera.h; sourceTree = "<group>"; };
+		4761CB8E2E53126D00B5CA60 /* OrthographicCamera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = OrthographicCamera.cpp; path = src/GEL/Renderer/OrthographicCamera.cpp; sourceTree = "<group>"; };
 		47C4F1D126678D43DB499011 /* matrix_projection.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_projection.hpp; path = vendor/glm/glm/ext/matrix_projection.hpp; sourceTree = "<group>"; };
 		48384439A2395B2B69805279 /* fast_exponential.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = fast_exponential.hpp; path = vendor/glm/glm/gtx/fast_exponential.hpp; sourceTree = "<group>"; };
 		4848941B5895780D5682425B /* quaternion_float_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_float_precision.hpp; path = vendor/glm/glm/ext/quaternion_float_precision.hpp; sourceTree = "<group>"; };
@@ -203,7 +219,7 @@
 		4CCB29233DC29715A9C61763 /* vector_packing.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_packing.inl; path = vendor/glm/glm/ext/vector_packing.inl; sourceTree = "<group>"; };
 		4D177F97E771688923A9CDD7 /* quaternion_geometric.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_geometric.hpp; path = vendor/glm/glm/ext/quaternion_geometric.hpp; sourceTree = "<group>"; };
 		4DE070DF41DFBA51C6CACF1F /* normalize_dot.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = normalize_dot.hpp; path = vendor/glm/glm/gtx/normalize_dot.hpp; sourceTree = "<group>"; };
-		4E2B72F576662BA75E01B935 /* libLearningEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libLearningEngine.a; path = libLearningEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E2B72F576662BA75E01B935 /* libLearningEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLearningEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E478AD23F3EF8C4AB427912 /* matrix_inverse.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_inverse.inl; path = vendor/glm/glm/gtc/matrix_inverse.inl; sourceTree = "<group>"; };
 		4EBD735FE9175C51254FC19F /* matrix_interpolation.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_interpolation.inl; path = vendor/glm/glm/gtx/matrix_interpolation.inl; sourceTree = "<group>"; };
 		4EDCB42C932B599ED552926C /* round.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = round.hpp; path = vendor/glm/glm/gtc/round.hpp; sourceTree = "<group>"; };
@@ -504,7 +520,7 @@
 		E10A9BD311EE93C52506CA13 /* vec4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vec4.hpp; path = vendor/glm/glm/vec4.hpp; sourceTree = "<group>"; };
 		E17E84D3C09B9F059CA4FB13 /* type_vec2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_vec2.hpp; path = vendor/glm/glm/detail/type_vec2.hpp; sourceTree = "<group>"; };
 		E18A8F33E12D72651B822573 /* type_mat2x4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat2x4.hpp; path = vendor/glm/glm/detail/type_mat2x4.hpp; sourceTree = "<group>"; };
-		E19C4EDD3901C1CFEB0FDD1D /* libImGui.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "ImGui.xcodeproj"; path = vendor/imgui/ImGui.xcodeproj; sourceTree = SOURCE_ROOT; };
+		E19C4EDD3901C1CFEB0FDD1D /* ImGui.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ImGui.xcodeproj; path = vendor/imgui/ImGui.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E24FCBC374DD95B5DDB63A03 /* normal.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = normal.hpp; path = vendor/glm/glm/gtx/normal.hpp; sourceTree = "<group>"; };
 		E35E8995F343B5C7DFB73FD5 /* _swizzle_func.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = _swizzle_func.hpp; path = vendor/glm/glm/detail/_swizzle_func.hpp; sourceTree = "<group>"; };
 		E4D20891E474EBC31EC99ED1 /* type_mat3x2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat3x2.hpp; path = vendor/glm/glm/detail/type_mat3x2.hpp; sourceTree = "<group>"; };
@@ -583,19 +599,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		CDA89391161977C35AB849D1 /* Embed Libraries */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Libraries";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXGroup section */
 		014014D2FAA61644EE417312 /* Products */ = {
@@ -917,6 +920,8 @@
 				FC2EAAE6F5F067582FEF6926 /* Shader.h */,
 				CF5F9708714932FA68704548 /* VertexArray.cpp */,
 				9DFD4612F562B904A770D452 /* VertexArray.h */,
+				4761CB8E2E53126D00B5CA60 /* OrthographicCamera.cpp */,
+				4761CB8D2E53126D00B5CA60 /* OrthographicCamera.h */,
 			);
 			name = Renderer;
 			sourceTree = "<group>";
@@ -1280,19 +1285,28 @@
 /* Begin PBXProject section */
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1640;
+			};
 			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "LearningEngine" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				Base,
+			);
 			mainGroup = 52922FC6A2A5C4782523F606 /* LearningEngine */;
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 014014D2FAA61644EE417312 /* Products */;
-					ProjectRef = 11BF275CF6062F8E79F35D9C /* GLFW.xcodeproj */;
-				},
-				{
 					ProductGroup = C7488D7AC0AE8EECB449EBBA /* Products */;
 					ProjectRef = 1197FB54F5DF038679CC3194 /* Glad.xcodeproj */;
+				},
+				{
+					ProductGroup = 014014D2FAA61644EE417312 /* Products */;
+					ProjectRef = 11BF275CF6062F8E79F35D9C /* GLFW.xcodeproj */;
 				},
 				{
 					ProductGroup = 3684523D5CAA81EFC3B1787D /* Products */;
@@ -1301,7 +1315,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				AF26403B05B3AAADDE2CBE7B /* libLearningEngine.a */,
+				AF26403B05B3AAADDE2CBE7B /* LearningEngine */,
 			);
 		};
 /* End PBXProject section */
@@ -1355,6 +1369,7 @@
 				490377E4E3276D16934D4E24 /* RenderCommand.cpp in Sources */,
 				1830A6D432FD158636CDAD14 /* Renderer.cpp in Sources */,
 				D1661F08E14B4B3ACDBED548 /* RendererAPI.cpp in Sources */,
+				4761CB8F2E53126D00B5CA60 /* OrthographicCamera.cpp in Sources */,
 				A2829F543ACF850669168594 /* Shader.cpp in Sources */,
 				5C2041A06C056DD25878F7E0 /* VertexArray.cpp in Sources */,
 				12485D3FF0EAF8B1A5CCFB7F /* OpenGLBuffer.cpp in Sources */,
@@ -1387,26 +1402,38 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		1E3C27A2C12A4E5450502DE2 /* Dist */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				CLANG_CXX_LANGUAGE_STANDARD = (
-					"c++17",
-				);
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
 				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
-				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = (
-					YES,
-				);
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PRECOMPILE_PREFIX_HEADER = (
-					YES,
-				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ../LearningEngine/src/gelpch.h;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					GEL_PLATFORM_MAC,
@@ -1417,7 +1444,11 @@
 					GEL_DIST,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/vendor/GLFW/include",
@@ -1425,19 +1456,11 @@
 					"$(SRCROOT)/vendor/spdlog/include",
 					"$(SRCROOT)/vendor/angle/include",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					../vendor/angle/out/Mac,
-				);
-				MACOSX_DEPLOYMENT_TARGET = (
-					10.15,
-				);
+				LIBRARY_SEARCH_PATHS = ../vendor/angle/out/Mac;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OBJROOT = "../bin-int/Dist-macosx-x86_64/LearningEngine";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = (
-					"-lopengl32.lib",
-					"-lGL",
-					"-lEGL",
-				);
+				OTHER_LDFLAGS = "-lopengl32.lib";
 				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
 				SYMROOT = "../bin/Dist-macosx-x86_64/LearningEngine";
 				USER_HEADER_SEARCH_PATHS = (
@@ -1457,21 +1480,36 @@
 		1EC0BF151F73BC0793558D55 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				CLANG_CXX_LANGUAGE_STANDARD = (
-					"c++17",
-				);
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
 				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
 				COPY_PHASE_STRIP = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = (
-					YES,
-				);
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = (
-					YES,
-				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ../LearningEngine/src/gelpch.h;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					GEL_PLATFORM_MAC,
@@ -1482,7 +1520,11 @@
 					GEL_DEBUG,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/vendor/GLFW/include",
@@ -1490,19 +1532,11 @@
 					"$(SRCROOT)/vendor/spdlog/include",
 					"$(SRCROOT)/vendor/angle/include",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					../vendor/angle/out/Mac,
-				);
-				MACOSX_DEPLOYMENT_TARGET = (
-					10.15,
-				);
+				LIBRARY_SEARCH_PATHS = ../vendor/angle/out/Mac;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OBJROOT = "../bin-int/Debug-macosx-x86_64/LearningEngine";
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					"-lopengl32.lib",
-					"-lGL",
-					"-lEGL",
-				);
+				OTHER_LDFLAGS = "-lopengl32.lib";
 				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
 				SYMROOT = "../bin/Debug-macosx-x86_64/LearningEngine";
 				USER_HEADER_SEARCH_PATHS = (
@@ -1523,18 +1557,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = (
-					"c++17",
-				);
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CONFIGURATION_BUILD_DIR = "../bin/Debug-macosx-x86_64/LearningEngine";
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = (
-					YES,
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = (
-					YES,
-				);
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/vendor/GLFW/include",
 					"$(SRCROOT)/vendor/Glad/include",
@@ -1542,9 +1572,7 @@
 					"$(SRCROOT)/vendor/angle/include",
 				);
 				INSTALL_PATH = /usr/local/lib;
-				MACOSX_DEPLOYMENT_TARGET = (
-					10.15,
-				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_NAME = LearningEngine;
 			};
 			name = Debug;
@@ -1553,18 +1581,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = (
-					"c++17",
-				);
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CONFIGURATION_BUILD_DIR = "../bin/Dist-macosx-x86_64/LearningEngine";
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = (
-					YES,
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = (
-					YES,
-				);
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/vendor/GLFW/include",
 					"$(SRCROOT)/vendor/Glad/include",
@@ -1572,9 +1596,7 @@
 					"$(SRCROOT)/vendor/angle/include",
 				);
 				INSTALL_PATH = /usr/local/lib;
-				MACOSX_DEPLOYMENT_TARGET = (
-					10.15,
-				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_NAME = LearningEngine;
 			};
 			name = Dist;
@@ -1582,19 +1604,34 @@
 		C654B28FBFBAB401B35610CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				CLANG_CXX_LANGUAGE_STANDARD = (
-					"c++17",
-				);
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
 				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
-				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = (
-					YES,
-				);
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PRECOMPILE_PREFIX_HEADER = (
-					YES,
-				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ../LearningEngine/src/gelpch.h;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					GEL_PLATFORM_MAC,
@@ -1605,7 +1642,11 @@
 					GEL_RELEASE,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/vendor/GLFW/include",
@@ -1613,19 +1654,11 @@
 					"$(SRCROOT)/vendor/spdlog/include",
 					"$(SRCROOT)/vendor/angle/include",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					../vendor/angle/out/Mac,
-				);
-				MACOSX_DEPLOYMENT_TARGET = (
-					10.15,
-				);
+				LIBRARY_SEARCH_PATHS = ../vendor/angle/out/Mac;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OBJROOT = "../bin-int/Release-macosx-x86_64/LearningEngine";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = (
-					"-lopengl32.lib",
-					"-lGL",
-					"-lEGL",
-				);
+				OTHER_LDFLAGS = "-lopengl32.lib";
 				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
 				SYMROOT = "../bin/Release-macosx-x86_64/LearningEngine";
 				USER_HEADER_SEARCH_PATHS = (
@@ -1646,18 +1679,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = (
-					"c++17",
-				);
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CONFIGURATION_BUILD_DIR = "../bin/Release-macosx-x86_64/LearningEngine";
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = (
-					YES,
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = (
-					YES,
-				);
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/vendor/GLFW/include",
 					"$(SRCROOT)/vendor/Glad/include",
@@ -1665,9 +1694,7 @@
 					"$(SRCROOT)/vendor/angle/include",
 				);
 				INSTALL_PATH = /usr/local/lib;
-				MACOSX_DEPLOYMENT_TARGET = (
-					10.15,
-				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_NAME = LearningEngine;
 			};
 			name = Release;
@@ -1685,7 +1712,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		C7337E44ED59ADF65460A484 /* Build configuration list for PBXNativeTarget "libLearningEngine.a" */ = {
+		C7337E44ED59ADF65460A484 /* Build configuration list for PBXNativeTarget "LearningEngine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4F63190A815C63BCFB3B9F4A /* Debug */,
@@ -1696,6 +1723,6 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
-};
-rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
 }

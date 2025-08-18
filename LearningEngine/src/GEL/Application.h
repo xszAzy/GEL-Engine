@@ -13,6 +13,8 @@
 #include "GEL/Renderer/Buffer.h"
 #include "GEL/Renderer/VertexArray.h"
 
+#include "GEL/Renderer/OrthoGraphicCamera.h"
+
 namespace GEL{
 	class GEL_API Application
 	{
@@ -43,6 +45,7 @@ namespace GEL{
         std::shared_ptr<Shader> m_NewShader;
 		std::shared_ptr<VertexArray> m_SquareVA;
 
+		OrthographicCamera m_Camera;
 	private:
 		static Application *s_Instance;
 	};
