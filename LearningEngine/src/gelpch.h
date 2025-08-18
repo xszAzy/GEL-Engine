@@ -16,6 +16,10 @@
 #ifdef GEL_PLATFORM_WINDOWS
 	#include <Windows.h>
 #else
-    #include <unistd.h>
+	#ifdef GEL_PLATFORM_MAC
+		#include <unistd.h>
+		#include "EGL/egl.h"
+		#include "GLES2/gl2.h"
+	#endif
 #endif
 

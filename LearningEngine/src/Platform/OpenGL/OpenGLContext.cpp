@@ -13,6 +13,10 @@ namespace GEL{
 	}
 	void OpenGLContext::Init()
 	{
+		//Moltengl
+		EGLDisplay display=eglGetDisplay(EGL_DEFAULT_DISPLAY);
+		eglInitialize(display, nullptr, nullptr);
+		
 		glfwMakeContextCurrent(m_WindowHandle);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		GEL_CORE_ASSERT(status, "Failed to initialize Glad!");

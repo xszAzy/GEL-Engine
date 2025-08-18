@@ -3,6 +3,7 @@
 
 #include <GLFW/glfw3.h>
 #include <glad/glad.h>
+#include "GEL/Renderer/Renderer.h"
 #include "Input.h"
 
 namespace GEL {
@@ -143,16 +144,18 @@ namespace GEL {
 	void Application::Run()
 	{
 		while (m_Running) {
-			glClearColor(0.1f, 0.1f, 0.1f, 0.2f);
-			glClear(GL_COLOR_BUFFER_BIT);
-
-            m_NewShader->Bind();
-            m_SquareVA->Bind();
-            glDrawElements(GL_TRIANGLES, m_SquareVA->GetIndexBuffer()->GetCount(), GL_UNSIGNED_INT, nullptr);
+			RenderCommand::SetClearColor({0.1f, 0.1f, 0.1f, 1});
+            RenderCommand::Clear();
             
-			m_Shader->Bind();
-			m_VertexArray->Bind();
-			glDrawElements(GL_TRIANGLES, m_VertexArray->GetIndexBuffer()->GetCount(), GL_UNSIGNED_INT, nullptr);
+            Renderer::BeginScene();
+			
+            m_NewShader->Bind();
+            Renderer::Submit(m_SquareVA);
+            
+            m_Shader->Bind();
+            Renderer::Submit(m_VertexArray);
+            
+            Renderer::EndScene();
 
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();

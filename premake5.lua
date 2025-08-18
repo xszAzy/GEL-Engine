@@ -102,6 +102,7 @@ project "LearningEngine"
             "vendor/angle/src/libANGEL",
         }
         libdirs{"vendor/angle/out/Mac"}
+        
     filter "configurations:Debug"
         defines"GEL_DEBUG"
         runtime "Debug"
@@ -168,14 +169,22 @@ project "Sandbox"
     filter "system:macosx"
         system "macosx"
         
+        defines
+        {
+			"GEL_PLATFORM_MAC"
+		}
+        
         links
         {
+        "GL",
+        "EGL",
         "Cocoa.framework",
         "IOKit.framework",
         "AppKit.framework",
         "CoreFoundation.framework",
         "CoreGraphics.framework"
         }
+        libdirs{"vendor/angle/out/Mac"}
         includedirs{
             "vendor/angle/include",
             "vendor/angle/src",

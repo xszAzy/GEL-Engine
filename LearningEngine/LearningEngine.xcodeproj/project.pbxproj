@@ -11,6 +11,7 @@
 		1817955824A247CA9F871398 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5C1300C9792D32A5828940 /* CoreFoundation.framework */; };
 		1830A6D432FD158636CDAD14 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A66FBFC778F0A6E7921FA3C /* Renderer.cpp */; };
 		419B1DED8A3A5C1FAD66142D /* WindowsWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF26CE95B01E3C871C21BCD5 /* WindowsWindow.cpp */; };
+		490377E4E3276D16934D4E24 /* RenderCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E4E950CD2A8D9FE508C634C /* RenderCommand.cpp */; };
 		4FE61EB5619D5EA7D70B4CF5 /* OpenGLContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8034E7D4BEBC62F6E3974BD /* OpenGLContext.cpp */; };
 		5B87855ACCAA264C8270D39A /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F86287C2209D40740838CE02 /* Layer.cpp */; };
 		5C2041A06C056DD25878F7E0 /* VertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF5F9708714932FA68704548 /* VertexArray.cpp */; };
@@ -21,9 +22,11 @@
 		9130093853F069AAB1254778 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B91C4E06FD8CD12F3C5FB20 /* QuartzCore.framework */; };
 		95EFFE0C89EF477E0EDA5C4C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A9A874B8BD79A6AC8EFEB4 /* CoreGraphics.framework */; };
 		A2829F543ACF850669168594 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B96C127CFDBAB7EE3FE1F0BC /* Shader.cpp */; };
+		B4CF978D4AF8A97F0C5F05CD /* OpenGLRendererAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00DBA1D5B3D1AB8704F40815 /* OpenGLRendererAPI.cpp */; };
 		B762408A248A4EFC261D3ECA /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893A8412D69D7A444CBC7A52 /* AppKit.framework */; };
 		B9CA2C199F61334B62A64259 /* libGlad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B187CD810B88E473D2CFDBC1 /* libGlad.a */; };
 		C39B3D3E56290730BF01AB7E /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF28886D25E4A381101EEC6 /* Metal.framework */; };
+		D1661F08E14B4B3ACDBED548 /* RendererAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 323D71F0D4270DE2CB4E2030 /* RendererAPI.cpp */; };
 		DDB6E7A573DFF997354655E5 /* OpenGLVertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B95C46D3E8BCE1F8FAE2AAD /* OpenGLVertexArray.cpp */; };
 		DFD0CF4881BA6B3A78E17D88 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9812EDD066364182ED449410 /* Application.cpp */; };
 		EA0614A5455164D733834AE5 /* libImGui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B70ACDADC8C20D9F3E2FFBED /* libImGui.a */; };
@@ -81,6 +84,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00DBA1D5B3D1AB8704F40815 /* OpenGLRendererAPI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = OpenGLRendererAPI.cpp; path = src/Platform/OpenGL/OpenGLRendererAPI.cpp; sourceTree = "<group>"; };
 		0561F2897684937B2C4B40C9 /* norm.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = norm.hpp; path = vendor/glm/glm/gtx/norm.hpp; sourceTree = "<group>"; };
 		0569EB1DCBF7E28F39FA095D /* exponential.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = exponential.hpp; path = vendor/glm/glm/exponential.hpp; sourceTree = "<group>"; };
 		066EA1C9A0C88ABBDD00F009 /* matrix_interpolation.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_interpolation.hpp; path = vendor/glm/glm/gtx/matrix_interpolation.hpp; sourceTree = "<group>"; };
@@ -134,11 +138,13 @@
 		22E4BA19B572840B1E4B2859 /* normal.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = normal.inl; path = vendor/glm/glm/gtx/normal.inl; sourceTree = "<group>"; };
 		23E448C5EB4903B77600D705 /* quaternion_trigonometric.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_trigonometric.hpp; path = vendor/glm/glm/ext/quaternion_trigonometric.hpp; sourceTree = "<group>"; };
 		24E7855315DEF34581E27393 /* matrix_integer.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_integer.hpp; path = vendor/glm/glm/ext/matrix_integer.hpp; sourceTree = "<group>"; };
+		25C359FA7D28CCEC2F36E83A /* RendererAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RendererAPI.h; path = src/GEL/Renderer/RendererAPI.h; sourceTree = "<group>"; };
 		267E6E1997A10F0B4D67BC59 /* hash.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = hash.hpp; path = vendor/glm/glm/gtx/hash.hpp; sourceTree = "<group>"; };
 		2708F65D36EE228F2361AC9D /* type_vec_simd.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_vec_simd.inl; path = vendor/glm/glm/detail/type_vec_simd.inl; sourceTree = "<group>"; };
 		277D0D0D94A51B7F96380B4D /* integer.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = integer.hpp; path = vendor/glm/glm/gtx/integer.hpp; sourceTree = "<group>"; };
 		27875FB506A479E7E2ADD5F5 /* type_vec3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_vec3.hpp; path = vendor/glm/glm/detail/type_vec3.hpp; sourceTree = "<group>"; };
 		27FF17FBC5E018AD9D5E5E3B /* func_geometric.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = func_geometric.inl; path = vendor/glm/glm/detail/func_geometric.inl; sourceTree = "<group>"; };
+		286A77D6CA5413C8C17B2616 /* RenderCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RenderCommand.h; path = src/GEL/Renderer/RenderCommand.h; sourceTree = "<group>"; };
 		287A8A31EB3AEAA3486FC871 /* optimum_pow.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = optimum_pow.hpp; path = vendor/glm/glm/gtx/optimum_pow.hpp; sourceTree = "<group>"; };
 		2A788FD881DE02CA33EC1E18 /* bitfield.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = bitfield.inl; path = vendor/glm/glm/gtc/bitfield.inl; sourceTree = "<group>"; };
 		2B44F4B7C3BCE229EFA3D2F7 /* scalar_multiplication.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = scalar_multiplication.hpp; path = vendor/glm/glm/gtx/scalar_multiplication.hpp; sourceTree = "<group>"; };
@@ -156,6 +162,7 @@
 		3169FDA38B6B149552B20BE3 /* extended_min_max.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = extended_min_max.hpp; path = vendor/glm/glm/gtx/extended_min_max.hpp; sourceTree = "<group>"; };
 		31A06B6910BD859BECC6E1A9 /* type_vec2.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_vec2.inl; path = vendor/glm/glm/detail/type_vec2.inl; sourceTree = "<group>"; };
 		31F5EAFB22ED58ED8EF0D93B /* std_based_type.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = std_based_type.inl; path = vendor/glm/glm/gtx/std_based_type.inl; sourceTree = "<group>"; };
+		323D71F0D4270DE2CB4E2030 /* RendererAPI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = RendererAPI.cpp; path = src/GEL/Renderer/RendererAPI.cpp; sourceTree = "<group>"; };
 		3442C26BCE9CAB5D0AD510AB /* matrix_uint2x2_sized.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_uint2x2_sized.hpp; path = vendor/glm/glm/ext/matrix_uint2x2_sized.hpp; sourceTree = "<group>"; };
 		3497F101133A8C73C81C8F41 /* quaternion_common.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_common.inl; path = vendor/glm/glm/ext/quaternion_common.inl; sourceTree = "<group>"; };
 		34A4158B8EA52C7D55EC23CB /* exterior_product.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = exterior_product.inl; path = vendor/glm/glm/gtx/exterior_product.inl; sourceTree = "<group>"; };
@@ -231,6 +238,7 @@
 		5CFC3C573B9ED7C9F080DA97 /* scalar_reciprocal.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = scalar_reciprocal.inl; path = vendor/glm/glm/ext/scalar_reciprocal.inl; sourceTree = "<group>"; };
 		5DDCC9895D7FACBB97D45FC9 /* type_mat4x2.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat4x2.inl; path = vendor/glm/glm/detail/type_mat4x2.inl; sourceTree = "<group>"; };
 		5E1912893D362CBB193F88C9 /* type_half.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_half.hpp; path = vendor/glm/glm/detail/type_half.hpp; sourceTree = "<group>"; };
+		5E4E950CD2A8D9FE508C634C /* RenderCommand.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = RenderCommand.cpp; path = src/GEL/Renderer/RenderCommand.cpp; sourceTree = "<group>"; };
 		5F5F623CB960792E80A7707C /* matrix_transform.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_transform.hpp; path = vendor/glm/glm/gtc/matrix_transform.hpp; sourceTree = "<group>"; };
 		5F9ECCFE59608970935F8B3E /* ulp.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = ulp.hpp; path = vendor/glm/glm/gtc/ulp.hpp; sourceTree = "<group>"; };
 		60FC7C2AB861EF1C6A700A6A /* type_ptr.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_ptr.hpp; path = vendor/glm/glm/gtc/type_ptr.hpp; sourceTree = "<group>"; };
@@ -467,6 +475,7 @@
 		D4061A8FC4FD8881310108CF /* vector_double3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_double3.hpp; path = vendor/glm/glm/ext/vector_double3.hpp; sourceTree = "<group>"; };
 		D47E0E3B48D8532DC6BBDC7B /* matrix_query.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_query.inl; path = vendor/glm/glm/gtx/matrix_query.inl; sourceTree = "<group>"; };
 		D49732F2FABD62A461C45932 /* Input.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Input.h; path = src/GEL/Input.h; sourceTree = "<group>"; };
+		D4D8E8FF72B9E9B14A382F3F /* OpenGLRendererAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OpenGLRendererAPI.h; path = src/Platform/OpenGL/OpenGLRendererAPI.h; sourceTree = "<group>"; };
 		D5368603E58369F5E3703443 /* matrix_double4x4_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double4x4_precision.hpp; path = vendor/glm/glm/ext/matrix_double4x4_precision.hpp; sourceTree = "<group>"; };
 		D671ED11ED848843DDA08351 /* gelpch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gelpch.h; path = src/gelpch.h; sourceTree = "<group>"; };
 		D6C34965C7BAB75733BE37A5 /* component_wise.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = component_wise.hpp; path = vendor/glm/glm/gtx/component_wise.hpp; sourceTree = "<group>"; };
@@ -898,8 +907,12 @@
 				40F98CA285483214C76F6AE2 /* Buffer.cpp */,
 				4B96FECC4558BB3E7F57BD0C /* Buffer.h */,
 				CAB610C43F1055B6BCF3DF04 /* GraphicsContext.h */,
+				5E4E950CD2A8D9FE508C634C /* RenderCommand.cpp */,
+				286A77D6CA5413C8C17B2616 /* RenderCommand.h */,
 				0A66FBFC778F0A6E7921FA3C /* Renderer.cpp */,
 				823D29A6C68BCF1808B307E6 /* Renderer.h */,
+				323D71F0D4270DE2CB4E2030 /* RendererAPI.cpp */,
+				25C359FA7D28CCEC2F36E83A /* RendererAPI.h */,
 				B96C127CFDBAB7EE3FE1F0BC /* Shader.cpp */,
 				FC2EAAE6F5F067582FEF6926 /* Shader.h */,
 				CF5F9708714932FA68704548 /* VertexArray.cpp */,
@@ -915,6 +928,8 @@
 				F60539B1D52253E3B12BAFF1 /* OpenGLBuffer.h */,
 				D8034E7D4BEBC62F6E3974BD /* OpenGLContext.cpp */,
 				956D9C27B03A0AD9B40AA267 /* OpenGLContext.h */,
+				00DBA1D5B3D1AB8704F40815 /* OpenGLRendererAPI.cpp */,
+				D4D8E8FF72B9E9B14A382F3F /* OpenGLRendererAPI.h */,
 				8B95C46D3E8BCE1F8FAE2AAD /* OpenGLVertexArray.cpp */,
 				CF4812976D29134944A758D7 /* OpenGLVertexArray.h */,
 			);
@@ -1337,11 +1352,14 @@
 				F9D8C686C066BDF82E68E4C6 /* LayerStack.cpp in Sources */,
 				668C3F6497703756AA886DA4 /* Log.cpp in Sources */,
 				FEB548DA97022E8CC5492F1A /* Buffer.cpp in Sources */,
+				490377E4E3276D16934D4E24 /* RenderCommand.cpp in Sources */,
 				1830A6D432FD158636CDAD14 /* Renderer.cpp in Sources */,
+				D1661F08E14B4B3ACDBED548 /* RendererAPI.cpp in Sources */,
 				A2829F543ACF850669168594 /* Shader.cpp in Sources */,
 				5C2041A06C056DD25878F7E0 /* VertexArray.cpp in Sources */,
 				12485D3FF0EAF8B1A5CCFB7F /* OpenGLBuffer.cpp in Sources */,
 				4FE61EB5619D5EA7D70B4CF5 /* OpenGLContext.cpp in Sources */,
+				B4CF978D4AF8A97F0C5F05CD /* OpenGLRendererAPI.cpp in Sources */,
 				DDB6E7A573DFF997354655E5 /* OpenGLVertexArray.cpp in Sources */,
 				FDA631FDB09C3BAF01BE983D /* WindowsInput.cpp in Sources */,
 				419B1DED8A3A5C1FAD66142D /* WindowsWindow.cpp in Sources */,

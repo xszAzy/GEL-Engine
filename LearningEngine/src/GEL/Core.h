@@ -1,17 +1,19 @@
 #pragma once
 
 #ifdef GEL_PLATFORM_WINDOWS
-#if GEL_DYNAMIC_LINK
-    #ifdef GEL_BUILD_DLL
-        #define GEL_API __declspec(dllexport)
-    #else
-        #define GEL_API __declspec(dllimport)
-    #endif
-#else
-    #define GEL_API
+	#if GEL_DYNAMIC_LINK
+		#ifdef GEL_BUILD_DLL
+			#define GEL_API __declspec(dllexport)
+		#else
+			#define GEL_API __declspec(dllimport)
+		#endif
+	#else
+		#define GEL_API
+	#endif
 #endif
-#else
-    #define GEL_API
+#ifdef GEL_PLATFORM_MAC
+	#define GEL_API
+	#define ANGLE_STATIC
 #endif
 
 #ifdef GEL_ENABLE_ASSERTS
