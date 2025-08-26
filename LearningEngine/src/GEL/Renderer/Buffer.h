@@ -24,6 +24,7 @@ namespace GEL
 		case ShaderDataType::Mat3:		return 4 * 3 * 3;	break;
 		case ShaderDataType::Mat4:		return 4 * 4 * 4;	break;
 		case ShaderDataType::Bool:		return 1;			break;
+			default:										break;
 		}
 		GEL_CORE_ASSERT(false, "Unknown ShaderDataType!");
 		return 0;
@@ -57,6 +58,7 @@ namespace GEL
 			case ShaderDataType::Mat3:		return 3 * 3;	break;
 			case ShaderDataType::Mat4:		return 4 * 4;	break;
 			case ShaderDataType::Bool:		return 1;		break;
+			default:										break;
 			}
 			return 0;
 		}
@@ -107,6 +109,7 @@ namespace GEL
 		virtual const BufferLayout& GetLayout() const = 0;
 
 		static VertexBuffer* Create(float* vertices , uint32_t size);
+		virtual void* GetNativeBuffer() const=0;
 	};
 
 	class IndexBuffer
@@ -120,5 +123,6 @@ namespace GEL
 		virtual uint32_t GetCount() const = 0;
 
 		static IndexBuffer* Create(uint32_t* indices, uint32_t size);
+		virtual void* GetNativeBuffer() const=0;
 	};
 }

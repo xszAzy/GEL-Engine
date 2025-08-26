@@ -7,16 +7,12 @@
 #include "Events/Event.h"
 #include"Events/ApplicationEvent.h"
 
+#include "GEL/Core/Timestep.h"
+
 #include "ImGui/ImGuiLayer.h"
 
-#include "GEL/Renderer/Shader.h"
-#include "GEL/Renderer/Buffer.h"
-#include "GEL/Renderer/VertexArray.h"
-
-#include "GEL/Renderer/OrthoGraphicCamera.h"
-
 namespace GEL{
-	class GEL_API Application
+	class Application
 	{
 	public:
 		Application();
@@ -32,20 +28,13 @@ namespace GEL{
 		inline Window& GetWindow() { return *m_Window; }
 
 	private:
-
 		bool OnWindowClose(WindowCloseEvent& e);
+	private:
 		std::unique_ptr<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
-
-		std::shared_ptr<Shader> m_Shader;
-		std::shared_ptr<VertexArray> m_VertexArray;
-
-        std::shared_ptr<Shader> m_NewShader;
-		std::shared_ptr<VertexArray> m_SquareVA;
-
-		OrthographicCamera m_Camera;
+		float m_LastFrameTime=0.0f;
 	private:
 		static Application *s_Instance;
 	};

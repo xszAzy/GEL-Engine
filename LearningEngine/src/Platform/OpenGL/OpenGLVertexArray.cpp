@@ -1,4 +1,4 @@
-#include "gelpch.h"
+
 #include "OpenGLVertexArray.h"
 
 #include <glad/glad.h>

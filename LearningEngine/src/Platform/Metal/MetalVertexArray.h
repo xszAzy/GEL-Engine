@@ -1,29 +1,38 @@
 #pragma once
 
 #include "GEL/Renderer/VertexArray.h"
-
+#include "MetalBuffer.h"
+#import <Cocoa/Cocoa.h>
+#import <Metal/Metal.h>
 namespace GEL
-{ 
-	class OpenGLVertexArray:public VertexArray
+{
+	class MetalVertexArray:public VertexArray
 	{
 	public:
-		OpenGLVertexArray();
-		virtual ~OpenGLVertexArray();
-
+		MetalVertexArray();
+		virtual ~MetalVertexArray();
+		
 		virtual void Bind() const override;
 		virtual void Unbind() const override;
-
+		
 		virtual void AddVertexBuffer(const std::shared_ptr<VertexBuffer>& vertexBuffer) override;
 		virtual void SetIndexBuffer(const std::shared_ptr<IndexBuffer>& indexBuffer) override;
-
+		
 		virtual const std::vector<std::shared_ptr<VertexBuffer>>& GetVertexBuffers() const override{return m_VertexBuffers;};
 		virtual const std::shared_ptr<IndexBuffer>& GetIndexBuffer() const override{return m_IndexBuffer;};
-
+		
+		MTLVertexDescriptor* GetMetalVertexDescriptor() const {return m_VertexDescriptor;}
+		void BindVertexBuffers(id<MTLRenderCommandEncoder> commandEncoder)const;
 		static VertexBuffer* Create();
+	private:
+		void CreateVertexDescriptor();
 	private:
 		uint32_t m_RendererID;
 		std::vector<std::shared_ptr<VertexBuffer>> m_VertexBuffers;
 		std::shared_ptr<IndexBuffer> m_IndexBuffer;
+		
+		MTLVertexDescriptor* m_VertexDescriptor;
 	};
-
+	
 }
+

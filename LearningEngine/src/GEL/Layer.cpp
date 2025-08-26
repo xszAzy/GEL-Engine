@@ -1,4 +1,4 @@
-#include "gelpch.h"
+
 #include "Layer.h"
 
 namespace GEL

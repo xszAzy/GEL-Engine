@@ -17,4 +17,4 @@ namespace GEL {
 		GEL_CORE_ASSERT(false, "Unknown RendererAPI!");
 		return nullptr;
 	}
-} // namespace GEL
+}

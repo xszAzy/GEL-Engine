@@ -3,7 +3,7 @@
 #include "GEL/Core.h"
 namespace GEL {
 
-	class GEL_API Input
+	class Input
 	{
 	public:
 		inline static bool IsKeyPressed(int keycode) { return s_Instance->IsKeyPressedImpl(keycode); }

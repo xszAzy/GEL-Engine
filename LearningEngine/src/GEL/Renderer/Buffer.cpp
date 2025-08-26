@@ -1,9 +1,9 @@
 #include "gelpch.h"
 #include "Buffer.h"
-
 #include "Renderer.h"
-
 #include "Platform/OpenGL/OpenGLBuffer.h"
+#include "Platform/Metal/MetalBuffer.h"
+
 
 
 namespace GEL {
@@ -12,6 +12,7 @@ namespace GEL {
 		{
 			case RendererAPI::API::None:		GEL_CORE_ASSERT(flase, "RendererAPI::None is currently not supported!"); return nullptr;
 			case RendererAPI::API::OpenGL:	return new OpenGLVertexBuffer(vertices, size);
+			case RendererAPI::API::Metal: return new MetalVertexBuffer(vertices,size);
 		}
 
 		GEL_CORE_ASSERT(false, "Unknown RendererAPI!");
@@ -22,6 +23,7 @@ namespace GEL {
 		{
 			case RendererAPI::API::None:		GEL_CORE_ASSERT(flase, "RendererAPI::None is currently not supported!"); return nullptr;
 			case RendererAPI::API::OpenGL:	return new OpenGLIndexBuffer(indices, size);
+			case RendererAPI::API::Metal: return new MetalIndexBuffer(indices,size);
 		}
 
 		GEL_CORE_ASSERT(false, "Unknown RendererAPI!");

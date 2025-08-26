@@ -2,11 +2,11 @@
 
 #include "GEL/Core.h"
 #include "GEL/Events/Event.h"
-
+#include "GEL/Core/TimeStep.h"
 
 namespace GEL
 {
-	class GEL_API Layer
+	class Layer
 	{
 	public:
 		Layer(const std::string& name = "Layer");
@@ -14,7 +14,7 @@ namespace GEL
 
 		virtual void OnAttach() {}
 		virtual void OnDetach() {}
-		virtual void OnUpdate() {}
+		virtual void OnUpdate(Timestep ts) {}
 		virtual void OnImGuiRenderer() {}
 		virtual void OnEvent(Event& event){}
 

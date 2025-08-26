@@ -1,5 +1,3 @@
-
-#include "gelpch.h"
 #include "WindowsInput.h"
 #include <GLFW/glfw3.h>
 #include "GEL/Application.h"

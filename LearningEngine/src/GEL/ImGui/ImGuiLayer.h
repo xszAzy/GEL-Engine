@@ -1,6 +1,6 @@
 #pragma once
 
-#include "GeL/Layer.h"
+#include "GEL/Layer.h"
 
 #include "GEL/Events/KeyEvent.h"
 #include "GEL/Events/MouseEvent.h"

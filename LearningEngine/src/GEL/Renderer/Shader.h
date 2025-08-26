@@ -1,19 +1,19 @@
 #pragma once
 
-#include "glm/glm.hpp"
+#include <string.h>
 
 namespace GEL
 {
 	class Shader
 	{
 	public:
-		Shader(const std::string& vertexSrc,const std::string& fragmentSrc);
-		~Shader();
+		virtual ~Shader()=default;
 
-		void Bind() const;
-		void Unbind() const;//UN
+		virtual void Bind() const =0;
+		virtual void Unbind() const =0;
 		
-		void UploadUniformMat4(const std::string& name,const glm::mat4& matrix);
+		//virtual void UploadVSRendererUniformBuffer();
+		static Shader* Create(const std::string& vertexSrc,const std::string& fragmentSrc);
 	private:
 		uint32_t m_RendererID;
 	};
