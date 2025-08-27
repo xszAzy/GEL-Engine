@@ -133,7 +133,8 @@ project "LearningEngine"
             "$(SRCROOT)/vendor/Glad/include",
             "$(SRCROOT)/vendor/spdlog/include",
             "$(SRCROOT)/vendor/angle/include",},
-            ["GCC_INCREASE_PRECOMPILED_HEADER_SHARING"]="YES"
+            ["GCC_INCREASE_PRECOMPILED_HEADER_SHARING"]="YES",
+            ["GCC_INPUT_FILETYPE"]="sourcecode.cpp.objcpp"
         }
 
 
@@ -175,6 +176,7 @@ project "Sandbox"
         
         links
         {
+        "Metal.framework",
         "Cocoa.framework",
         "IOKit.framework",
         "AppKit.framework",

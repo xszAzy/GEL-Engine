@@ -2,8 +2,8 @@
 
 #include "GEL/Window.h"
 #include "GEL/Renderer/GraphicsContext.h"
-//#include "GEL/Log.h"
-
+#include "GEL/Log.h"
+#include <functional>
 
 struct GLFWwindow;
 
@@ -20,6 +20,7 @@ namespace GEL {
 		inline unsigned int GetHeight()  const override { return m_Data.Height; }
 
 		inline void SetEventCallback(const EventCallbackFn& Callback) override { m_Data.EventCallback = Callback; }
+		const EventCallbackFn& GetEventCallback()const override {return m_Data.EventCallback;}
 		void SetVSync(bool enabled) override;
 		bool IsVSync() const override;
 

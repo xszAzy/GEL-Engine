@@ -19,6 +19,12 @@ namespace GEL {
 	{
 		m_Buffer=nil;
 	}
+	void MetalVertexBuffer::Bind() const
+	{
+	}
+	void MetalVertexBuffer::Unbind() const
+	{
+	}
 
 	/////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////IndexBuffer//////////////////////////////////////////////////////
@@ -38,5 +44,11 @@ namespace GEL {
 	MetalIndexBuffer::~MetalIndexBuffer()
 	{
 		m_Buffer=nil;
+	}
+	void MetalIndexBuffer::Bind() const
+	{
+	}
+	void MetalIndexBuffer::Unbind() const
+	{
 	}
 }

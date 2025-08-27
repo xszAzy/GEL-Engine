@@ -1,3 +1,4 @@
+#include "gelpch.h"
 #include "WindowsWindow.h"
 
 #include "GEL/Events/ApplicationEvent.h"
@@ -21,6 +22,7 @@ namespace GEL {
 
 	Window* Window::Create(const WindowProps& props)
 	{
+		return new WindowsWindow(props);
 	}
 
 	
