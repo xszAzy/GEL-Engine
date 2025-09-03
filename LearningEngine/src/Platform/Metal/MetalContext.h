@@ -15,6 +15,8 @@ namespace GEL {
 		static void Init(id<MTLDevice> device,CAMetalLayer* layer) ;
 		static void Shutdown() ;
 		
+		
+		
 		static id<MTLDevice> GetDevice(){return s_Device;}
 		static id<MTLCommandQueue> GetCommandQueue(){return s_CommandQueue;}
 		static CAMetalLayer* GetLayer(){return s_Layer;}
@@ -30,7 +32,11 @@ namespace GEL {
 		static void UpdateRenderPassDescriptorWithCurrentDrawable();
 	
 		static MTLPixelFormat GetDrawablePixelFormat(){return s_PixelFormat;}
-		static bool IsValid(){return s_Device!=nil&&s_Layer!=nil;}
+		
+		static void BeginFrame();
+		static void EndFrame();
+		
+		static bool IsValid();
 	private:
 		static CAMetalLayer* s_Layer;
 		static id<MTLDevice> s_Device;

@@ -13,10 +13,8 @@
 		1817955824A247CA9F871398 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5C1300C9792D32A5828940 /* CoreFoundation.framework */; };
 		1830A6D432FD158636CDAD14 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A66FBFC778F0A6E7921FA3C /* Renderer.cpp */; };
 		2ABAC9A518225C57B51C4FE5 /* MetalRendererAPI.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4025274D4CAFD9BFC794A58D /* MetalRendererAPI.mm */; };
+		352D46D1A915BE83CB636D11 /* MetalClear.mm in Sources */ = {isa = PBXBuildFile; fileRef = 58C4ADB91F52A52B8D54CBF9 /* MetalClear.mm */; };
 		419B1DED8A3A5C1FAD66142D /* WindowsWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF26CE95B01E3C871C21BCD5 /* WindowsWindow.cpp */; };
-		477958822E5EA5D300EE4A41 /* MetalPipelineState.mm in Sources */ = {isa = PBXBuildFile; fileRef = 477958812E5EA5D300EE4A41 /* MetalPipelineState.mm */; };
-		477958892E5EB3E500EE4A41 /* MetalRenderPass.mm in Sources */ = {isa = PBXBuildFile; fileRef = 477958882E5EB3E500EE4A41 /* MetalRenderPass.mm */; };
-		4779588C2E5EBBAC00EE4A41 /* MetalClear.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4779588B2E5EBBAC00EE4A41 /* MetalClear.mm */; };
 		490377E4E3276D16934D4E24 /* RenderCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E4E950CD2A8D9FE508C634C /* RenderCommand.cpp */; };
 		4FE61EB5619D5EA7D70B4CF5 /* OpenGLContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8034E7D4BEBC62F6E3974BD /* OpenGLContext.cpp */; };
 		52F374CDF0D4757FC852BB0D /* MetalContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF67F510BFC8676DF4A635 /* MetalContext.mm */; };
@@ -24,11 +22,12 @@
 		5C2041A06C056DD25878F7E0 /* VertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF5F9708714932FA68704548 /* VertexArray.cpp */; };
 		5CC2E6936CA812C5591B9CD3 /* MacOSWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C466F5BBE300B4DB5571D9B /* MacOSWindow.mm */; };
 		6090C9794627D0AB096CDFB9 /* libGLFW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 172B87E1712C9ED338739621 /* libGLFW.a */; };
-		60E664DAD540A9CC5324331A /* ImGuiLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC621BE2DE8BF894127CE222 /* ImGuiLayer.cpp */; };
+		60E664DAD540A9CC5324331A /* ImGuiLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC621BE2DE8BF894127CE222 /* ImGuiLayer.mm */; };
 		6335385941D7D3CBF6B9D699 /* OpenGLShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D53732E1D4DA16130F2EC921 /* OpenGLShader.cpp */; };
 		668C3F6497703756AA886DA4 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A116DE2CC73D0DDE2E44046C /* Log.cpp */; };
 		713678D803C442CA6C9CE718 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BACC980CF188B320DBC2FC0 /* IOKit.framework */; };
 		82F31B8C2A68B73ED32DC1CC /* OrthographicCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 24FC1B34039EB6A6B880B974 /* OrthographicCamera.cpp */; };
+		84A319D1CD425803F06E1011 /* MetalRenderPass.mm in Sources */ = {isa = PBXBuildFile; fileRef = E084E7B9D17C55AB3D7FD5F9 /* MetalRenderPass.mm */; };
 		9130093853F069AAB1254778 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B91C4E06FD8CD12F3C5FB20 /* QuartzCore.framework */; };
 		95EFFE0C89EF477E0EDA5C4C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A9A874B8BD79A6AC8EFEB4 /* CoreGraphics.framework */; };
 		A2829F543ACF850669168594 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B96C127CFDBAB7EE3FE1F0BC /* Shader.cpp */; };
@@ -36,10 +35,12 @@
 		B4CF978D4AF8A97F0C5F05CD /* OpenGLRendererAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00DBA1D5B3D1AB8704F40815 /* OpenGLRendererAPI.cpp */; };
 		B762408A248A4EFC261D3ECA /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893A8412D69D7A444CBC7A52 /* AppKit.framework */; };
 		B9CA2C199F61334B62A64259 /* libGlad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B187CD810B88E473D2CFDBC1 /* libGlad.a */; };
+		C09FAC31681547E310DA5271 /* MetalPipelineState.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0420C519E2C3608B97A56359 /* MetalPipelineState.mm */; };
 		C39B3D3E56290730BF01AB7E /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF28886D25E4A381101EEC6 /* Metal.framework */; };
 		D1661F08E14B4B3ACDBED548 /* RendererAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 323D71F0D4270DE2CB4E2030 /* RendererAPI.cpp */; };
 		DDB6E7A573DFF997354655E5 /* OpenGLVertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B95C46D3E8BCE1F8FAE2AAD /* OpenGLVertexArray.cpp */; };
 		DFD0CF4881BA6B3A78E17D88 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9812EDD066364182ED449410 /* Application.cpp */; };
+		E4B53551F49A6183E10DEB91 /* MetalShader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 96199F3938033B2B2F2A4D79 /* MetalShader.mm */; };
 		EA0614A5455164D733834AE5 /* libImGui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B70ACDADC8C20D9F3E2FFBED /* libImGui.a */; };
 		EF136FDFE8D52C5122D42E1F /* gelpch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE23C6870694AAB94B337CC7 /* gelpch.cpp */; };
 		F37682E067D0C7D2E5B45120 /* ImGuiBuild.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0796C88C2A3493AF69432C8 /* ImGuiBuild.cpp */; };
@@ -109,6 +110,7 @@
 
 /* Begin PBXFileReference section */
 		00DBA1D5B3D1AB8704F40815 /* OpenGLRendererAPI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = OpenGLRendererAPI.cpp; path = src/Platform/OpenGL/OpenGLRendererAPI.cpp; sourceTree = "<group>"; };
+		0420C519E2C3608B97A56359 /* MetalPipelineState.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objc; name = MetalPipelineState.mm; path = src/Platform/Metal/MetalPipelineState.mm; sourceTree = "<group>"; };
 		0561F2897684937B2C4B40C9 /* norm.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = norm.hpp; path = vendor/glm/glm/gtx/norm.hpp; sourceTree = "<group>"; };
 		0569EB1DCBF7E28F39FA095D /* exponential.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = exponential.hpp; path = vendor/glm/glm/exponential.hpp; sourceTree = "<group>"; };
 		066EA1C9A0C88ABBDD00F009 /* matrix_interpolation.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_interpolation.hpp; path = vendor/glm/glm/gtx/matrix_interpolation.hpp; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		0E7D65A36B046A15F3A723E3 /* matrix_int3x2_sized.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_int3x2_sized.hpp; path = vendor/glm/glm/ext/matrix_int3x2_sized.hpp; sourceTree = "<group>"; };
 		0E8552FD1B10056F95F4D13D /* dual_quaternion.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = dual_quaternion.inl; path = vendor/glm/glm/gtx/dual_quaternion.inl; sourceTree = "<group>"; };
 		0EF28886D25E4A381101EEC6 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		0F075D5569087447304F6B95 /* MetalPipelineState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MetalPipelineState.h; path = src/Platform/Metal/MetalPipelineState.h; sourceTree = "<group>"; };
 		11762D7985D0726B03B3FBB9 /* vector_uint3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_uint3.hpp; path = vendor/glm/glm/ext/vector_uint3.hpp; sourceTree = "<group>"; };
 		1197FB54F5DF038679CC3194 /* Glad.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Glad.xcodeproj; path = vendor/Glad/Glad.xcodeproj; sourceTree = SOURCE_ROOT; };
 		11BF275CF6062F8E79F35D9C /* GLFW.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GLFW.xcodeproj; path = vendor/GLFW/GLFW.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -220,12 +223,6 @@
 		456A5BAF3661C9A1A26549EF /* matrix_uint2x2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_uint2x2.hpp; path = vendor/glm/glm/ext/matrix_uint2x2.hpp; sourceTree = "<group>"; };
 		46484EA93A47981BBF32ACE9 /* matrix_int3x3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_int3x3.hpp; path = vendor/glm/glm/ext/matrix_int3x3.hpp; sourceTree = "<group>"; };
 		46DD1A415367CCB3CE4C9881 /* matrix_float4x3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float4x3.hpp; path = vendor/glm/glm/ext/matrix_float4x3.hpp; sourceTree = "<group>"; };
-		477958802E5EA5D300EE4A41 /* MetalPipelineState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MetalPipelineState.h; path = src/Platform/Metal/MetalPipelineState.h; sourceTree = "<group>"; };
-		477958812E5EA5D300EE4A41 /* MetalPipelineState.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = MetalPipelineState.mm; path = src/Platform/Metal/MetalPipelineState.mm; sourceTree = "<group>"; };
-		477958872E5EB3E500EE4A41 /* MetalRenderPass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MetalRenderPass.h; path = src/Platform/Metal/MetalRenderPass.h; sourceTree = "<group>"; };
-		477958882E5EB3E500EE4A41 /* MetalRenderPass.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = MetalRenderPass.mm; path = src/Platform/Metal/MetalRenderPass.mm; sourceTree = "<group>"; };
-		4779588A2E5EBBAC00EE4A41 /* MetalClear.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MetalClear.h; path = src/Platform/Metal/MetalClear.h; sourceTree = "<group>"; };
-		4779588B2E5EBBAC00EE4A41 /* MetalClear.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = MetalClear.mm; path = src/Platform/Metal/MetalClear.mm; sourceTree = "<group>"; };
 		47C4F1D126678D43DB499011 /* matrix_projection.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_projection.hpp; path = vendor/glm/glm/ext/matrix_projection.hpp; sourceTree = "<group>"; };
 		48384439A2395B2B69805279 /* fast_exponential.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = fast_exponential.hpp; path = vendor/glm/glm/gtx/fast_exponential.hpp; sourceTree = "<group>"; };
 		4848941B5895780D5682425B /* quaternion_float_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_float_precision.hpp; path = vendor/glm/glm/ext/quaternion_float_precision.hpp; sourceTree = "<group>"; };
@@ -264,6 +261,7 @@
 		5803F139CC5E362B4A41BF79 /* vector_angle.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_angle.inl; path = vendor/glm/glm/gtx/vector_angle.inl; sourceTree = "<group>"; };
 		5841713DCC9BB62F4A7F3F7D /* euler_angles.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = euler_angles.hpp; path = vendor/glm/glm/gtx/euler_angles.hpp; sourceTree = "<group>"; };
 		589AF3229CE99894DF10D162 /* round.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = round.inl; path = vendor/glm/glm/gtc/round.inl; sourceTree = "<group>"; };
+		58C4ADB91F52A52B8D54CBF9 /* MetalClear.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objc; name = MetalClear.mm; path = src/Platform/Metal/MetalClear.mm; sourceTree = "<group>"; };
 		599CA6B7F77DA769CEFBECF7 /* type_quat_simd.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_quat_simd.inl; path = vendor/glm/glm/detail/type_quat_simd.inl; sourceTree = "<group>"; };
 		59BAF6AFCADD97A180A444EF /* mat3x3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = mat3x3.hpp; path = vendor/glm/glm/mat3x3.hpp; sourceTree = "<group>"; };
 		5A444E2538E6E997EDC8EC65 /* scalar_relational.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = scalar_relational.inl; path = vendor/glm/glm/ext/scalar_relational.inl; sourceTree = "<group>"; };
@@ -390,6 +388,7 @@
 		9578A18B741B3CFD28FD3FCB /* quaternion_common.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_common.hpp; path = vendor/glm/glm/ext/quaternion_common.hpp; sourceTree = "<group>"; };
 		957A20CD583A813FB56F5F0D /* vector_int2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_int2.hpp; path = vendor/glm/glm/ext/vector_int2.hpp; sourceTree = "<group>"; };
 		95A65489ED0BC77B9F19E2C9 /* log_base.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = log_base.hpp; path = vendor/glm/glm/gtx/log_base.hpp; sourceTree = "<group>"; };
+		96199F3938033B2B2F2A4D79 /* MetalShader.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objc; name = MetalShader.mm; path = src/Platform/Metal/MetalShader.mm; sourceTree = "<group>"; };
 		966C2EABA8960B5DDC86F4EB /* _noise.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = _noise.hpp; path = vendor/glm/glm/detail/_noise.hpp; sourceTree = "<group>"; };
 		96F0E2BB87E850ADF3EBD0FB /* component_wise.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = component_wise.inl; path = vendor/glm/glm/gtx/component_wise.inl; sourceTree = "<group>"; };
 		973C5D8DEEA1D07FA0AFEBCD /* raw_data.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = raw_data.inl; path = vendor/glm/glm/gtx/raw_data.inl; sourceTree = "<group>"; };
@@ -440,6 +439,7 @@
 		AB66D5F3B7F1886532D65433 /* float_normalize.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = float_normalize.inl; path = vendor/glm/glm/gtx/float_normalize.inl; sourceTree = "<group>"; };
 		AC7A7AFDA079C46F2564D93D /* closest_point.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = closest_point.hpp; path = vendor/glm/glm/gtx/closest_point.hpp; sourceTree = "<group>"; };
 		AD0EDD7E4EF87970461F8BBE /* quaternion.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion.inl; path = vendor/glm/glm/gtc/quaternion.inl; sourceTree = "<group>"; };
+		AD12673573A05EA7E1A28575 /* MetalShader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MetalShader.h; path = src/Platform/Metal/MetalShader.h; sourceTree = "<group>"; };
 		AE25DC339F1D4A250B20CA73 /* scalar_packing.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = scalar_packing.hpp; path = vendor/glm/glm/ext/scalar_packing.hpp; sourceTree = "<group>"; };
 		AE3AF91F8D58135169616F5F /* type_half.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_half.inl; path = vendor/glm/glm/detail/type_half.inl; sourceTree = "<group>"; };
 		AE913311E2107283FA0A5151 /* matrix_float2x2_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float2x2_precision.hpp; path = vendor/glm/glm/ext/matrix_float2x2_precision.hpp; sourceTree = "<group>"; };
@@ -495,11 +495,12 @@
 		C78CB8A5BB8C0217407716E5 /* compatibility.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = compatibility.hpp; path = vendor/glm/glm/gtx/compatibility.hpp; sourceTree = "<group>"; };
 		C7AED60D3C091AFFB9ECA44D /* vector_bool1.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_bool1.hpp; path = vendor/glm/glm/ext/vector_bool1.hpp; sourceTree = "<group>"; };
 		C8A1B7E3BCA10155418C1623 /* vector_float2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_float2.hpp; path = vendor/glm/glm/ext/vector_float2.hpp; sourceTree = "<group>"; };
+		C93116B5BD306027421B74F5 /* MetalRenderPass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MetalRenderPass.h; path = src/Platform/Metal/MetalRenderPass.h; sourceTree = "<group>"; };
 		C959A5AF235ABCA1EAA1B3EF /* matrix_transform.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_transform.hpp; path = vendor/glm/glm/ext/matrix_transform.hpp; sourceTree = "<group>"; };
 		CA28E72F3B4B8821F112356F /* mat4x2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = mat4x2.hpp; path = vendor/glm/glm/mat4x2.hpp; sourceTree = "<group>"; };
 		CAB610C43F1055B6BCF3DF04 /* GraphicsContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GraphicsContext.h; path = src/GEL/Renderer/GraphicsContext.h; sourceTree = "<group>"; };
 		CB6D52973FC79789BDAB20D7 /* vector_uint2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_uint2.hpp; path = vendor/glm/glm/ext/vector_uint2.hpp; sourceTree = "<group>"; };
-		CC621BE2DE8BF894127CE222 /* ImGuiLayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ImGuiLayer.cpp; path = src/GEL/ImGui/ImGuiLayer.cpp; sourceTree = "<group>"; };
+		CC621BE2DE8BF894127CE222 /* ImGuiLayer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = ImGuiLayer.mm; path = src/GEL/ImGui/ImGuiLayer.mm; sourceTree = "<group>"; };
 		CC6DF7436297093523FD6583 /* vector_bool1_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_bool1_precision.hpp; path = vendor/glm/glm/ext/vector_bool1_precision.hpp; sourceTree = "<group>"; };
 		CCECF9A86ED6959A65FDA7E8 /* quaternion.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion.hpp; path = vendor/glm/glm/gtc/quaternion.hpp; sourceTree = "<group>"; };
 		CE5F78CDC25EC23F4749D70D /* perpendicular.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = perpendicular.hpp; path = vendor/glm/glm/gtx/perpendicular.hpp; sourceTree = "<group>"; };
@@ -547,6 +548,7 @@
 		DFCFFFB13B1153230E6B9DF1 /* ext.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = ext.hpp; path = vendor/glm/glm/ext.hpp; sourceTree = "<group>"; };
 		E0089BD13B49EF430EA43A11 /* fwd.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = fwd.hpp; path = vendor/glm/glm/fwd.hpp; sourceTree = "<group>"; };
 		E01EEA56D11658483D19D896 /* type_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_precision.hpp; path = vendor/glm/glm/gtc/type_precision.hpp; sourceTree = "<group>"; };
+		E084E7B9D17C55AB3D7FD5F9 /* MetalRenderPass.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objc; name = MetalRenderPass.mm; path = src/Platform/Metal/MetalRenderPass.mm; sourceTree = "<group>"; };
 		E0EE37FB7ECF38AD564D7E3B /* compute_common.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = compute_common.hpp; path = vendor/glm/glm/detail/compute_common.hpp; sourceTree = "<group>"; };
 		E10A9BD311EE93C52506CA13 /* vec4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vec4.hpp; path = vendor/glm/glm/vec4.hpp; sourceTree = "<group>"; };
 		E17E84D3C09B9F059CA4FB13 /* type_vec2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_vec2.hpp; path = vendor/glm/glm/detail/type_vec2.hpp; sourceTree = "<group>"; };
@@ -605,6 +607,7 @@
 		FD7C6419900A2E0BF8E2D259 /* common.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = common.inl; path = vendor/glm/glm/gtx/common.inl; sourceTree = "<group>"; };
 		FD86CF5841D574CA83FCAD98 /* noise.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = noise.hpp; path = vendor/glm/glm/gtc/noise.hpp; sourceTree = "<group>"; };
 		FDBACC7755203F69072E5AB7 /* raw_data.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = raw_data.hpp; path = vendor/glm/glm/gtx/raw_data.hpp; sourceTree = "<group>"; };
+		FE0C69F55571DCE7077FF835 /* MetalClear.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MetalClear.h; path = src/Platform/Metal/MetalClear.h; sourceTree = "<group>"; };
 		FE478351EF3EF1435B427191 /* matrix_uint3x2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_uint3x2.hpp; path = vendor/glm/glm/ext/matrix_uint3x2.hpp; sourceTree = "<group>"; };
 		FEA259CC913023BEFA08C80C /* MouseEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MouseEvent.h; path = src/GEL/Events/MouseEvent.h; sourceTree = "<group>"; };
 		FEE5DF51A0CF7B4397F68D91 /* type_trait.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_trait.inl; path = vendor/glm/glm/gtx/type_trait.inl; sourceTree = "<group>"; };
@@ -948,18 +951,20 @@
 			children = (
 				6613ADBB2CA1A52D9AA3CBFB /* MetalBuffer.h */,
 				566D82DFF8571ED1EF7E311F /* MetalBuffer.mm */,
+				FE0C69F55571DCE7077FF835 /* MetalClear.h */,
+				58C4ADB91F52A52B8D54CBF9 /* MetalClear.mm */,
 				41B29071E39C2C63DAC33EB1 /* MetalContext.h */,
 				4DFF67F510BFC8676DF4A635 /* MetalContext.mm */,
+				0F075D5569087447304F6B95 /* MetalPipelineState.h */,
+				0420C519E2C3608B97A56359 /* MetalPipelineState.mm */,
+				C93116B5BD306027421B74F5 /* MetalRenderPass.h */,
+				E084E7B9D17C55AB3D7FD5F9 /* MetalRenderPass.mm */,
 				D6582E49C74F9C3B33531C89 /* MetalRendererAPI.h */,
 				4025274D4CAFD9BFC794A58D /* MetalRendererAPI.mm */,
+				AD12673573A05EA7E1A28575 /* MetalShader.h */,
+				96199F3938033B2B2F2A4D79 /* MetalShader.mm */,
 				DC0EA4E1CD0612D339099321 /* MetalVertexArray.h */,
 				C48AE265D11594D74BFA60A5 /* MetalVertexArray.mm */,
-				477958802E5EA5D300EE4A41 /* MetalPipelineState.h */,
-				477958812E5EA5D300EE4A41 /* MetalPipelineState.mm */,
-				477958872E5EB3E500EE4A41 /* MetalRenderPass.h */,
-				477958882E5EB3E500EE4A41 /* MetalRenderPass.mm */,
-				4779588A2E5EBBAC00EE4A41 /* MetalClear.h */,
-				4779588B2E5EBBAC00EE4A41 /* MetalClear.mm */,
 			);
 			name = Metal;
 			sourceTree = "<group>";
@@ -1326,7 +1331,7 @@
 			isa = PBXGroup;
 			children = (
 				B0796C88C2A3493AF69432C8 /* ImGuiBuild.cpp */,
-				CC621BE2DE8BF894127CE222 /* ImGuiLayer.cpp */,
+				CC621BE2DE8BF894127CE222 /* ImGuiLayer.mm */,
 				A16C572C6F8FAADEF69DFD6C /* ImGuiLayer.h */,
 			);
 			name = ImGui;
@@ -1435,25 +1440,26 @@
 			files = (
 				DFD0CF4881BA6B3A78E17D88 /* Application.cpp in Sources */,
 				F37682E067D0C7D2E5B45120 /* ImGuiBuild.cpp in Sources */,
-				60E664DAD540A9CC5324331A /* ImGuiLayer.cpp in Sources */,
+				60E664DAD540A9CC5324331A /* ImGuiLayer.mm in Sources */,
 				5B87855ACCAA264C8270D39A /* Layer.cpp in Sources */,
 				F9D8C686C066BDF82E68E4C6 /* LayerStack.cpp in Sources */,
 				668C3F6497703756AA886DA4 /* Log.cpp in Sources */,
 				FEB548DA97022E8CC5492F1A /* Buffer.cpp in Sources */,
-				4779588C2E5EBBAC00EE4A41 /* MetalClear.mm in Sources */,
 				82F31B8C2A68B73ED32DC1CC /* OrthographicCamera.cpp in Sources */,
 				490377E4E3276D16934D4E24 /* RenderCommand.cpp in Sources */,
 				1830A6D432FD158636CDAD14 /* Renderer.cpp in Sources */,
 				D1661F08E14B4B3ACDBED548 /* RendererAPI.cpp in Sources */,
 				A2829F543ACF850669168594 /* Shader.cpp in Sources */,
 				5C2041A06C056DD25878F7E0 /* VertexArray.cpp in Sources */,
-				477958822E5EA5D300EE4A41 /* MetalPipelineState.mm in Sources */,
 				07D4CEC37BBD46759E0AF503 /* MacOSInput.mm in Sources */,
 				5CC2E6936CA812C5591B9CD3 /* MacOSWindow.mm in Sources */,
 				AB32E457BB181089A78B9A97 /* MetalBuffer.mm in Sources */,
+				352D46D1A915BE83CB636D11 /* MetalClear.mm in Sources */,
 				52F374CDF0D4757FC852BB0D /* MetalContext.mm in Sources */,
+				C09FAC31681547E310DA5271 /* MetalPipelineState.mm in Sources */,
+				84A319D1CD425803F06E1011 /* MetalRenderPass.mm in Sources */,
 				2ABAC9A518225C57B51C4FE5 /* MetalRendererAPI.mm in Sources */,
-				477958892E5EB3E500EE4A41 /* MetalRenderPass.mm in Sources */,
+				E4B53551F49A6183E10DEB91 /* MetalShader.mm in Sources */,
 				06D2F23DF43A84EF9134787D /* MetalVertexArray.mm in Sources */,
 				12485D3FF0EAF8B1A5CCFB7F /* OpenGLBuffer.cpp in Sources */,
 				4FE61EB5619D5EA7D70B4CF5 /* OpenGLContext.cpp in Sources */,

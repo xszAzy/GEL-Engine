@@ -3,8 +3,13 @@
 #include<glad/glad.h>
 #include "GLFW/glfw3.h"
 #include "ImGuiLayer.h"
-
+#ifdef GEL_PLATFORM_WINDOWS
 #include "backends/imgui_impl_opengl3.h"
+#endif
+#ifdef GEL_PLATFORM_MAC
+#include "backends/imgui_impl_metal.h"
+#include "backends/imgui_impl_osx.h"
+#endif
 #include "backends/imgui_impl_glfw.h"
 
 
@@ -50,20 +55,42 @@ namespace GEL
 		GLFWwindow* window = static_cast<GLFWwindow*>(app.GetWindow().GetNativeWindow());
 		
 		// Setup Platform/Renderer backends
+#ifdef GEL_PLATFORM_WINDOWS
 		ImGui_ImplGlfw_InitForOpenGL(window, true);
 		ImGui_ImplOpenGL3_Init("#version 410");
-
+#endif
+#ifdef GEL_PLATFORM_MAC
+		m_Device=MTLCreateSystemDefaultDevice();
+		ImGui_ImplGlfw_InitForOther(window, true);
+		ImGui_ImplMetal_Init(m_Device);
+		
+		CreateFontTexture();
+#endif
 	}
 	void ImGuiLayer::OnDetach()
 	{
+#ifdef GEL_PLATFORM_WINDOWS
 		ImGui_ImplOpenGL3_Shutdown();
 		ImGui_ImplGlfw_Shutdown();
+#endif
+#ifdef GEL_PLATFORM_MAC
+		ImGui_ImplMetal_Shutdown();
+#endif
+		
 		ImGui::DestroyContext();
 	}
 	void ImGuiLayer::Begin()
 	{
+#ifdef GEL_PLATFORM_WINDOWS
 		ImGui_ImplOpenGL3_NewFrame();
 		ImGui_ImplGlfw_NewFrame();
+#endif
+#ifdef GEL_PLATFORM_MAC
+		NSWindow* window =(NSWindow*)Application::Get().GetWindow().GetNativeWindow();
+		NSView* view =[window contentView];
+		ImGui_ImplOSX_NewFrame(view);
+		
+#endif
 		ImGui::NewFrame();
 	}
 	void ImGuiLayer::End()
@@ -73,7 +100,9 @@ namespace GEL
 		Application& app = Application::Get();
 		io.DisplaySize = ImVec2((float)app.GetWindow().GetWidth(), (float)app.GetWindow().GetHeight());
 		ImGui::Render();
+#ifdef GEL_PLATFORM_WINDOW
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
 
 		if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
 		{
@@ -82,6 +111,7 @@ namespace GEL
 			ImGui::RenderPlatformWindowsDefault();
 			glfwMakeContextCurrent(backup_current_context);
 		}
+#endif
 	}
 
 	void ImGuiLayer::OnImGuiRenderer()

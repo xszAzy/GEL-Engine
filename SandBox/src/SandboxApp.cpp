@@ -1,6 +1,6 @@
 #include "GEL.h"
 
-#include "Platform/OpenGL/OpenGLShader.h"
+#include "Platform/Metal/MetalShader.h"
 
 #include "../imgui/imgui.h"
 
@@ -55,7 +55,7 @@ public:
 		std::shared_ptr<GEL::IndexBuffer> squareIB;
 		squareIB.reset(GEL::IndexBuffer::Create(indices, sizeof(squareIndices)/sizeof(uint32_t)));
 		m_VertexArray->SetIndexBuffer(indexbuffer);
-		
+	/*opengl
 		std::string vertexSrc = R"(
    #version 330 core
    layout(location=0) in vec3 a_Position;
@@ -84,9 +84,46 @@ public:
    color = v_Color;
    }
   )";
+		*/
+		std::string vertexSrc=R"(
+#include <metal_stdlib>
+using namespace metal;
+
+struct VertexIn{
+	float3 position [[attribute(0)]];
+	float4 color [[attribute(1)]];
+};
+
+struct VertexOut{
+	float4 position [[position]];
+	float4 color;
+	float3 worldPosition;
+};
+
+vertex VertexOut vertex_main(VertexIn in [[stage_in]],constant float4x4& u_Transform [[buffer(2)]]){
+	VertexOut out;
+
+	float4 worldPosition=u_Transform*float4(in.position,1.0);
+	out.position=u_ViewProjection*worldPosition;
+	out.color=in.color;
+	out.worldPosition=worldPosition.xyz;
+
+	return out;
+}
+)";
 		
+		std::string fragmentSrc=R"(
+#include <metal_stdlib>
+using namespace metal;
+
+fragment float4 fragment_main(VertexOut in [[stage_in]]){
+	float3 color=in.worldPosition*0.3;
+	return float4(color,1.0);
+	return in.color;
+}
+)";
 		m_Shader.reset(GEL::Shader::Create(vertexSrc,fragmentSrc));
-		
+/*
 		std::string vertexSrc2 = R"(
    #version 330 core
    layout(location=0) in vec3 a_Position;
@@ -114,7 +151,7 @@ public:
    }
   )";
 		m_NewShader.reset(GEL::Shader::Create(vertexSrc2,fragmentSrc2));
-		
+		*/
 	}
 	void OnUpdate(GEL::Timestep ts) override {
 		GEL_TRACE("Delta Time: {0}s ({1})",ts.GetSeconds(),ts.GetMilliSeconds());
@@ -162,8 +199,8 @@ public:
 		//mi->SetTexture("u_AlbedoMap",texture);
 		//squareMesh->SetMaterial(mi);
 		
-		std::dynamic_pointer_cast<GEL::OpenGLShader>(m_NewShader)->Bind();
-		std::dynamic_pointer_cast<GEL::OpenGLShader>(m_NewShader)->UploadUniformFloat3("u_Color", m_SquareColor);
+		std::dynamic_pointer_cast<GEL::MetalShader>(m_NewShader)->Bind();
+		std::dynamic_pointer_cast<GEL::MetalShader>(m_NewShader)->UploadUniformFloat3("u_Color", m_SquareColor);
 		
 		for (int i=0;i<20;i++)
 		{

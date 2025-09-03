@@ -11,6 +11,7 @@
 		37DE654A5D865FBC7BB6E38A /* libLearningEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D561F242BEC424FE44D832 /* libLearningEngine.a */; };
 		5569FCC299B8A234DBDFDB02 /* SandboxApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB5332CA0D1EDFFC49D4090A /* SandboxApp.cpp */; };
 		713678D803C442CA6C9CE718 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BACC980CF188B320DBC2FC0 /* IOKit.framework */; };
+		9130093853F069AAB1254778 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B91C4E06FD8CD12F3C5FB20 /* QuartzCore.framework */; };
 		95EFFE0C89EF477E0EDA5C4C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A9A874B8BD79A6AC8EFEB4 /* CoreGraphics.framework */; };
 		B762408A248A4EFC261D3ECA /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893A8412D69D7A444CBC7A52 /* AppKit.framework */; };
 		C39B3D3E56290730BF01AB7E /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF28886D25E4A381101EEC6 /* Metal.framework */; };
@@ -20,48 +21,19 @@
 /* Begin PBXContainerItemProxy section */
 		6AF5AB28B858A15A2E77A168 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DD3E438CCAA5D63E679FC9CC /* ../LearningEngine/LearningEngine.xcodeproj */;
+			containerPortal = DD3E438CCAA5D63E679FC9CC /* LearningEngine.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 4E2B72F576662BA75E01B935;
 			remoteInfo = libLearningEngine.a;
 		};
 		BD301DC10A9313F380B21401 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DD3E438CCAA5D63E679FC9CC /* ../LearningEngine/LearningEngine.xcodeproj */;
+			containerPortal = DD3E438CCAA5D63E679FC9CC /* LearningEngine.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = AF26403B05B3AAADDE2CBE7B;
 			remoteInfo = libLearningEngine.a;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		0BACC980CF188B320DBC2FC0 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		0EF28886D25E4A381101EEC6 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
-		74A9A874B8BD79A6AC8EFEB4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		893A8412D69D7A444CBC7A52 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		8D6BC6AA50D7885C8F7B2CEA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		DD3E438CCAA5D63E679FC9CC /* libLearningEngine.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "LearningEngine.xcodeproj"; path = ../LearningEngine/LearningEngine.xcodeproj; sourceTree = SOURCE_ROOT; };
-		EA5C1300C9792D32A5828940 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		EB5332CA0D1EDFFC49D4090A /* SandboxApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SandboxApp.cpp; path = src/SandboxApp.cpp; sourceTree = "<group>"; };
-		F8CF3E989D21DC4AAF5A24D8 /* Sandbox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = Sandbox; path = Sandbox; sourceTree = BUILT_PRODUCTS_DIR; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		F9B9A80849CD3CBACC4B6E48 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C39B3D3E56290730BF01AB7E /* Metal.framework in Frameworks */,
-				F8E8DBA28B76A594F44F49E2 /* Cocoa.framework in Frameworks */,
-				713678D803C442CA6C9CE718 /* IOKit.framework in Frameworks */,
-				B762408A248A4EFC261D3ECA /* AppKit.framework in Frameworks */,
-				1817955824A247CA9F871398 /* CoreFoundation.framework in Frameworks */,
-				95EFFE0C89EF477E0EDA5C4C /* CoreGraphics.framework in Frameworks */,
-				37DE654A5D865FBC7BB6E38A /* libLearningEngine.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		248F1A74C7DAA3A6E2AB70B4 /* Embed Libraries */ = {
@@ -75,6 +47,37 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0BACC980CF188B320DBC2FC0 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		0EF28886D25E4A381101EEC6 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		74A9A874B8BD79A6AC8EFEB4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		893A8412D69D7A444CBC7A52 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		8B91C4E06FD8CD12F3C5FB20 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8D6BC6AA50D7885C8F7B2CEA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		DD3E438CCAA5D63E679FC9CC /* LearningEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LearningEngine.xcodeproj; path = ../LearningEngine/LearningEngine.xcodeproj; sourceTree = SOURCE_ROOT; };
+		EA5C1300C9792D32A5828940 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		EB5332CA0D1EDFFC49D4090A /* SandboxApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SandboxApp.cpp; path = src/SandboxApp.cpp; sourceTree = "<group>"; };
+		F8CF3E989D21DC4AAF5A24D8 /* Sandbox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sandbox; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9B9A80849CD3CBACC4B6E48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C39B3D3E56290730BF01AB7E /* Metal.framework in Frameworks */,
+				F8E8DBA28B76A594F44F49E2 /* Cocoa.framework in Frameworks */,
+				713678D803C442CA6C9CE718 /* IOKit.framework in Frameworks */,
+				B762408A248A4EFC261D3ECA /* AppKit.framework in Frameworks */,
+				9130093853F069AAB1254778 /* QuartzCore.framework in Frameworks */,
+				1817955824A247CA9F871398 /* CoreFoundation.framework in Frameworks */,
+				95EFFE0C89EF477E0EDA5C4C /* CoreGraphics.framework in Frameworks */,
+				37DE654A5D865FBC7BB6E38A /* libLearningEngine.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		6849586FFB54B1614389A6AF /* Sandbox */ = {
@@ -119,6 +122,7 @@
 				8D6BC6AA50D7885C8F7B2CEA /* Cocoa.framework */,
 				0BACC980CF188B320DBC2FC0 /* IOKit.framework */,
 				893A8412D69D7A444CBC7A52 /* AppKit.framework */,
+				8B91C4E06FD8CD12F3C5FB20 /* QuartzCore.framework */,
 				EA5C1300C9792D32A5828940 /* CoreFoundation.framework */,
 				74A9A874B8BD79A6AC8EFEB4 /* CoreGraphics.framework */,
 			);
@@ -153,9 +157,16 @@
 /* Begin PBXProject section */
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "Sandbox" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				Base,
+			);
 			mainGroup = 6849586FFB54B1614389A6AF /* Sandbox */;
 			projectDirPath = "";
 			projectReferences = (
@@ -210,19 +221,12 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		04F5F75AFE5BF8CCF1F7559A /* Dist */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = (
-					YES,
-				);
-				CLANG_ENABLE_MODULES = (
-					YES,
-				);
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CONFIGURATION_BUILD_DIR = "../bin/Dist-macosx-x86_64/Sandbox";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -234,16 +238,13 @@
 		52C1E94BA548143D778C778B /* Dist */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = (
-					YES,
-				);
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
-				CLANG_ENABLE_MODULES = (
-					YES,
-				);
+				CLANG_ENABLE_MODULES = YES;
 				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
 				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					GEL_PLATFORM_MAC,
@@ -252,33 +253,20 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				LIBRARY_SEARCH_PATHS = (
-					../vendor/angle/out/Mac,
-				);
+				LIBRARY_SEARCH_PATHS = ../vendor/angle/out/Mac;
 				OBJROOT = "../bin-int/Dist-macosx-x86_64/Sandbox";
 				ONLY_ACTIVE_ARCH = NO;
 				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
 				SYMROOT = "../bin/Dist-macosx-x86_64/Sandbox";
-				USER_HEADER_SEARCH_PATHS = (
-					../LearningEngine/src,
-					../LearningEngine/vendor/glm,
-					../LearningEngine/vendor/spdlog/include,
-					../vendor/angle/include,
-					../vendor/angle/src,
-					../vendor/angle/src/libANGEL,
-				);
+				USER_HEADER_SEARCH_PATHS = "../LearningEngine/src ../LearningEngine/vendor/glm ../LearningEngine/vendor/spdlog/include ../vendor/angle/include ../vendor/angle/src ../vendor/angle/src/libANGEL";
 			};
 			name = Dist;
 		};
 		C5DDD7ADEC04075F530AFDED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = (
-					YES,
-				);
-				CLANG_ENABLE_MODULES = (
-					YES,
-				);
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CONFIGURATION_BUILD_DIR = "../bin/Debug-macosx-x86_64/Sandbox";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -290,16 +278,13 @@
 		D2EB7F98773E1D4A897665D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = (
-					YES,
-				);
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
-				CLANG_ENABLE_MODULES = (
-					YES,
-				);
+				CLANG_ENABLE_MODULES = YES;
 				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
 				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					GEL_PLATFORM_MAC,
@@ -308,39 +293,27 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				LIBRARY_SEARCH_PATHS = (
-					../vendor/angle/out/Mac,
-				);
+				LIBRARY_SEARCH_PATHS = ../vendor/angle/out/Mac;
 				OBJROOT = "../bin-int/Release-macosx-x86_64/Sandbox";
 				ONLY_ACTIVE_ARCH = NO;
 				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
 				SYMROOT = "../bin/Release-macosx-x86_64/Sandbox";
-				USER_HEADER_SEARCH_PATHS = (
-					../LearningEngine/src,
-					../LearningEngine/vendor/glm,
-					../LearningEngine/vendor/spdlog/include,
-					../vendor/angle/include,
-					../vendor/angle/src,
-					../vendor/angle/src/libANGEL,
-				);
+				USER_HEADER_SEARCH_PATHS = "../LearningEngine/src ../LearningEngine/vendor/glm ../LearningEngine/vendor/spdlog/include ../vendor/angle/include ../vendor/angle/src ../vendor/angle/src/libANGEL";
 			};
 			name = Release;
 		};
 		E3FEB5DE874A3F10A21B0C1E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = (
-					YES,
-				);
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
-				CLANG_ENABLE_MODULES = (
-					YES,
-				);
+				CLANG_ENABLE_MODULES = YES;
 				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
 				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					GEL_PLATFORM_MAC,
@@ -349,33 +322,20 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				LIBRARY_SEARCH_PATHS = (
-					../vendor/angle/out/Mac,
-				);
+				LIBRARY_SEARCH_PATHS = ../vendor/angle/out/Mac;
 				OBJROOT = "../bin-int/Debug-macosx-x86_64/Sandbox";
 				ONLY_ACTIVE_ARCH = YES;
 				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
 				SYMROOT = "../bin/Debug-macosx-x86_64/Sandbox";
-				USER_HEADER_SEARCH_PATHS = (
-					../LearningEngine/src,
-					../LearningEngine/vendor/glm,
-					../LearningEngine/vendor/spdlog/include,
-					../vendor/angle/include,
-					../vendor/angle/src,
-					../vendor/angle/src/libANGEL,
-				);
+				USER_HEADER_SEARCH_PATHS = "../LearningEngine/src ../LearningEngine/vendor/glm ../LearningEngine/vendor/spdlog/include ../vendor/angle/include ../vendor/angle/src ../vendor/angle/src/libANGEL";
 			};
 			name = Debug;
 		};
 		FB7591E743E6761988854827 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = (
-					YES,
-				);
-				CLANG_ENABLE_MODULES = (
-					YES,
-				);
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CONFIGURATION_BUILD_DIR = "../bin/Release-macosx-x86_64/Sandbox";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -408,6 +368,6 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
-};
-rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
 }

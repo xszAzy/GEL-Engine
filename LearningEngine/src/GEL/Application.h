@@ -27,6 +27,7 @@ namespace GEL{
 		static Application& Get();
 		inline Window& GetWindow() { return *m_Window; }
 
+		void InitializeMetal();
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 	private:

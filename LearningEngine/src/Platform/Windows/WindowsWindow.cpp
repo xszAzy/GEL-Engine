@@ -20,7 +20,7 @@ namespace GEL {
 		Init(props);
 	}
 
-	Window* Window::Create(const WindowProps& props)
+	Window* Window::CreateWindowsWindow(const WindowProps& props)
 	{
 		return new WindowsWindow(props);
 	}

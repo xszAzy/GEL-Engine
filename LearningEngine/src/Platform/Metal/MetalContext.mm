@@ -108,5 +108,24 @@ namespace GEL{
 		
 		s_RenderPassDescriptor.colorAttachments[0].clearColor=MTLClearColorMake(0.3, 0.1, 0.2, 1.0);
 	}
+	
+	void MetalContext::BeginFrame(){
+		s_CurrentDrawable=[s_Layer nextDrawable];
+		GetCurrentCommandBuffer();
+		
+		UpdateRenderPassDescriptorWithCurrentDrawable();
+	}
+	
+	void MetalContext::EndFrame(){
+		if(s_CurrentCommandBuffer&&s_CurrentDrawable){
+			[s_CurrentCommandBuffer presentDrawable:s_CurrentDrawable];
+			CommitCurrentCommandBuffer();
+			s_CurrentDrawable=nil;
+		}
+	}
+	
+	bool MetalContext::IsValid(){
+		return s_Device!=nil&&s_Layer!=nil;
+	}
 }
 

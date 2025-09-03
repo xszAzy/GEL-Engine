@@ -180,6 +180,7 @@ project "Sandbox"
         "Cocoa.framework",
         "IOKit.framework",
         "AppKit.framework",
+        "QuartzCore.framework",
         "CoreFoundation.framework",
         "CoreGraphics.framework"
         }

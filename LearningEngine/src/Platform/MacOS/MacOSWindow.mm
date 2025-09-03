@@ -43,7 +43,7 @@ NSObject <NSWindowDelegate>
 	unsigned int height =size.height *scale;
 	
 	GEL::WindowResizeEvent event(width, height);
-	m_Window->GetEventCallback();
+	m_Window->GetEventCallback()(event);
 }
 
 @end
@@ -183,7 +183,9 @@ namespace GEL
 	MacOSWindow::~MacOSWindow() {
 		Shutdown();
 	}
-	
+	Window* Window::CreateMacOSWindow(const WindowProps& props){
+		return new MacOSWindow(props);
+	}
 	void MacOSWindow::Init(const WindowProps& props)
 	{
 		m_Data.Title = props.Title;
